@@ -35,12 +35,12 @@ const Home = () => {
 
     const testimonials = [
         {
-            quote: "Fly Towards Digital Innovation helped our business go from local visibility to national reach. Their SEO and ad strategy brought us a 250% increase in website leads within 3 months.",
+            quote: "Sanju Wind Energy Services helped our business go from local visibility to national reach. Their SEO and ad strategy brought us a 250% increase in website leads within 3 months.",
             author: "Priya Sharma",
             role: "Marketing Manager"
         },
         {
-            quote: "Our new website designed by Fly Towards Digital Innovation is fast, modern, and user friendly. Their team perfectly captured our brand and improved our online conversions.",
+            quote: "Our new website designed by Sanju Wind Energy Services is fast, modern, and user friendly. Their team perfectly captured our brand and improved our online conversions.",
             author: "Ramesh Kumar",
             role: "Founder, RK Industries"
         },
@@ -50,7 +50,7 @@ const Home = () => {
             role: "Brand Owner"
         },
         {
-            quote: "We started Google and Meta ads with Fly Towards Digital Innovation, and within weeks our inquiries doubled. The reporting and support team are very transparent and helpful.",
+            quote: "We started Google and Meta ads with Sanju Wind Energy Services, and within weeks our inquiries doubled. The reporting and support team are very transparent and helpful.",
             author: "Neha Raj",
             role: "Business Consultant"
         },
@@ -60,14 +60,14 @@ const Home = () => {
             role: "Product Head"
         },
         {
-            quote: "From website creation to SEO and ongoing support, Fly Towards has been our trusted digital partner. Their team truly cares about our business success.",
+            quote: "From website creation to SEO and ongoing support, Sanju Wind Energy has been our trusted digital partner. Their team truly cares about our business success.",
             author: "Vignesh R",
             role: "Small Business Owner"
         }
     ];
 
     const faqs = [
-        { q: "What exactly does Fly Towards Digital Innovation do?", a: "We provide complete digital marketing and IT solutions to increase your reach and revenue." },
+        { q: "What exactly does Sanju Wind Energy Services do?", a: "We provide complete digital marketing and IT solutions to increase your reach and revenue." },
         { q: "How can this help my business grow?", a: "Our data-driven strategies and custom campaigns focus on real, measurable business results. It helps businesses reach customers online, increase visibility, and grow sales faster than traditional methods." },
         { q: "Do you offer both Marketing and Engineering?", a: "Yes, we handle everything — from marketing to web, app, and software development." },
         { q: "Does digital marketing actually work?", a: "Yes! Targeted campaigns attract the right audience who are ready to buy your products or services." }
@@ -82,8 +82,8 @@ const Home = () => {
                 <div className="grid-2">
                     <div data-aos="fade-up">
                         <h1 className="hero-title" style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', marginBottom: '1rem', lineHeight: 1.2 }}>
-                            FLY TOWARDS <br />
-                            <span className="gradient-text" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', display: 'block', marginTop: '0.5rem' }}>DIGITAL INNOVATION</span>
+                            Sanju Wind Energy <br />
+                            <span className="gradient-text" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', display: 'block', marginTop: '0.5rem' }}>SERVICES</span>
                         </h1>
                         <h2 className="mb-4" style={{ fontSize: '1.6rem', fontWeight: 700, opacity: 0.9, lineHeight: 1.4, maxWidth: '600px' }}>
                             Empowering Businesses Through <br /> Digital Marketing & IT Innovation
@@ -103,7 +103,7 @@ const Home = () => {
                         <div className="glass-container" style={{ padding: '1rem', border: '1px solid var(--border)', borderRadius: '40px' }}>
                             <img
                                 src="home_hero_innovation_cyber_1772536795720.png"
-                                alt="Digital Innovation Hub"
+                                alt="Services Hub"
                                 className="floating-img"
                                 style={{ borderRadius: '30px', width: '100%' }}
                             />
@@ -119,7 +119,7 @@ const Home = () => {
                     <span className="section-tag" style={{ margin: '0 auto 1.5rem' }}>Who We Are</span>
                     <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Bridging Creativity <span className="gradient-text">with Technology</span></h2>
                     <p style={{ fontSize: '1.25rem', lineHeight: 1.8, color: 'var(--text-muted)', marginBottom: '4rem' }}>
-                        Fly Towards is a growth focused company offering end-to-end Digital Marketing and IT Solutions. Our mission is to bridge creativity with technology — helping businesses boost visibility, sales, and performance in the digital world.
+                        Sanju Wind Energy is a growth focused company offering end-to-end Digital Marketing and IT Solutions. Our mission is to bridge creativity with technology — helping businesses boost visibility, sales, and performance in the digital world.
                     </p>
                 </div>
 
@@ -237,10 +237,10 @@ const Home = () => {
                     <div>
                         <Quote size={50} color="var(--secondary)" style={{ margin: '0 auto 1.5rem', opacity: 0.2 }} />
                         <p style={{ fontSize: '1.6rem', fontWeight: 500, fontStyle: 'italic', marginBottom: '2.5rem', lineHeight: 1.6, color: 'var(--text-dark)' }}>
-                            "Every brand has a story — we’re here to make it reach the world. At Fly Towards, we make that happen through Innovation, strategy and commitment"
+                            "Every brand has a story — we’re here to make it reach the world. At Sanju Wind Energy, we make that happen through Innovation, strategy and commitment"
                         </p>
                         <h4 style={{ fontSize: '1.6rem', fontWeight: 900, marginBottom: '0.3rem' }}>Mr. SANJAY KUMAR</h4>
-                        <span className="section-tag" style={{ border: 'none', background: 'transparent', padding: 0, justifyContent: 'center' }}>FOUNDER & CEO, Fly Towards</span>
+                        <span className="section-tag" style={{ border: 'none', background: 'transparent', padding: 0, justifyContent: 'center' }}>FOUNDER & CEO, Sanju Wind Energy</span>
                     </div>
                 </div>
 

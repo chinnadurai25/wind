@@ -85,7 +85,7 @@ const Products = () => {
                         Digital Products That <span className="gradient-text">Power Modern Businesses</span>
                     </h1>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                        Fly-Towards Digital Innovation builds smart, scalable software products designed to help businesses automate operations, improve customer experience, and grow faster.
+                        Sanju Wind Energy Services builds smart, scalable software products designed to help businesses automate operations, improve customer experience, and grow faster.
                         Our product ecosystem covers payroll management, billing and invoicing, customer relationship management, and on-demand food delivery solutions for startups and enterprises.
                     </p>
                 </div>

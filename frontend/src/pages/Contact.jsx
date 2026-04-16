@@ -55,7 +55,7 @@ const Contact = () => {
                         <div style={{ marginBottom: '3rem' }}>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Get in <span className="gradient-text">Touch</span></h2>
                             <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '2.5rem' }}>
-                                Your digital success starts here. Contact us today and fly towards digital innovation.
+                                Your digital success starts here. Contact us today and Sanju Wind Energy Services.
                             </p>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -95,7 +95,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem', fontWeight: 700 }}>Office Address</h4>
-                                        <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', margin: 0, lineHeight: 1.6 }}>Fly Towards Digital Innovation,<br />vadaku Ratha veethi sankarankovil,<br />Tenkasi, Tamil Nadu - 627756</p>
+                                        <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', margin: 0, lineHeight: 1.6 }}>Sanju Wind Energy Services,<br />vadaku Ratha veethi sankarankovil,<br />Tenkasi, Tamil Nadu - 627756</p>
                                     </div>
                                 </div>
                             </div>

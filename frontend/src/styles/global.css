@@ -6,13 +6,13 @@ html, body {
 :root {
     --bg-dark: #070710;
     --bg-white: #ffffff;
-    --primary: #00f2ff;
-    --secondary: #ff007a;
-    --accent: #9d00ff;
+    --primary: #0F9A2A;
+    --secondary: #0B4C80;
+    --accent: #0b253b;
     --text-dark: #0f172a;
     --text-muted: #64748b;
     --border: rgba(15, 23, 42, 0.08);
-    --gradient-primary: linear-gradient(135deg, #00f2ff 0%, #ff007a 100%);
+    --gradient-primary: linear-gradient(135deg, #0B4C80 0%, #0F9A2A 100%);
     --shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
 }
 

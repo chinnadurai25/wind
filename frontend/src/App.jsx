@@ -20,6 +20,7 @@ import Contact from './pages/Contact';
 import Events from './pages/Events';
 import Careers from './pages/Careers';
 import Loader from './components/Loader';
+import AdminLetterhead from './pages/AdminLetterhead';
 
 function App() {
     useEffect(() => {
@@ -50,6 +51,7 @@ function App() {
                     <Route path="/events" element={<Events />} />
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/admin" element={<AdminLetterhead />} />
                 </Routes>
                 <Footer />
             </div>

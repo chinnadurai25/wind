@@ -27,7 +27,7 @@ const Navbar = () => {
     return (
         <nav>
             <Link to="/" className="logo">
-                <img src="/logo.png" alt="Fly Towards Logo" style={{ height: '80px', width: 'auto' }} />
+                <img src="/logo.png" alt="Sanju Wind Energy Logo" style={{ height: '80px', width: 'auto' }} />
             </Link>
 
             <div className="menu-icon" onClick={toggleMenu}>
@@ -38,33 +38,21 @@ const Navbar = () => {
                 <li onClick={closeMenu}><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
                 <li onClick={closeMenu}><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
 
-                <li className={`dropdown ${activeDropdown === 'products' ? 'mobile-active' : ''}`}>
-                    <Link to="/products" className={location.pathname === '/products' ? 'active' : ''} onClick={(e) => toggleDropdown('products', e)}>
-                        Products <ChevronDown size={12} strokeWidth={3} className={activeDropdown === 'products' ? 'rotate' : ''} />
-                    </Link>
-                    <ul className={`dropdown-menu ${activeDropdown === 'products' ? 'show' : ''}`}>
-                        <li onClick={closeMenu}><Link to="/fly-bill">Fly Bill</Link></li>
-                        <li onClick={closeMenu}><Link to="/payroll">FLYROLL</Link></li>
-                        <li onClick={closeMenu}><Link to="/smart-crm">Smart CRM</Link></li>
-                    </ul>
-                </li>
-
                 <li className={`dropdown ${activeDropdown === 'services' ? 'mobile-active' : ''}`}>
                     <Link to="/service" onClick={(e) => toggleDropdown('services', e)}>
                         Service <ChevronDown size={12} strokeWidth={3} className={activeDropdown === 'services' ? 'rotate' : ''} />
                     </Link>
                     <ul className={`dropdown-menu ${activeDropdown === 'services' ? 'show' : ''}`}>
-                        <li onClick={closeMenu}><Link to="/web-development">Web Development</Link></li>
-                        <li onClick={closeMenu}><Link to="/whatsapp-api">WhatsApp Marketing API</Link></li>
-                        <li onClick={closeMenu}><Link to="/digital-marketing">Digital Marketing</Link></li>
+                        <li onClick={closeMenu}><Link to="/service">Installation & Maintenance</Link></li>
+                        <li onClick={closeMenu}><Link to="/service">Blade Repair Work</Link></li>
+                        <li onClick={closeMenu}><Link to="/service">Rope Access Work</Link></li>
+                        <li onClick={closeMenu}><Link to="/service">HSE Safety Services</Link></li>
                         <li onClick={closeMenu}><Link to="/service">All Services</Link></li>
                     </ul>
                 </li>
 
-                <li onClick={closeMenu}><Link to="/events" className={location.pathname === '/events' ? 'active' : ''}>Events</Link></li>
-                <li onClick={closeMenu}><Link to="/careers" className={location.pathname === '/careers' ? 'active' : ''}>Careers</Link></li>
-                <li onClick={closeMenu}><Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''}>Blog</Link></li>
                 <li onClick={closeMenu}><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
+                <li onClick={closeMenu}><Link to="/admin" className={location.pathname === '/admin' ? 'active' : ''}>Admin Page</Link></li>
                 
                 <li className="nav-btn-mobile" onClick={closeMenu}>
                     <Link to="/contact" className="btn btn-primary">Enquire Now</Link>

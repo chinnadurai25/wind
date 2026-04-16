@@ -123,8 +123,8 @@ const Blog = () => {
                         In today’s digital economy, growth is no longer defined by physical presence — it’s driven by online visibility, digital systems, and customer engagement. Whether you’re a small business, startup, or established corporate firm, your ability to scale depends on how effectively you leverage the digital ecosystem.
                     </p>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', color: 'var(--text-muted)', fontWeight: 600 }}>
-                        <img src="https://ui-avatars.com/api/?name=Fly+Towards&background=00f2ff&color=fff" alt="Fly Towards" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
-                        <span>By Fly Towards Digital Innovation</span>
+                        <img src="https://ui-avatars.com/api/?name=Fly+Towards&background=00f2ff&color=fff" alt="Sanju Wind Energy" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
+                        <span>By Sanju Wind Energy Services</span>
                     </div>
                 </div>
             </section>
@@ -170,7 +170,7 @@ const Blog = () => {
                         <div className="card" data-aos="zoom-in" data-aos-delay="0.1s" style={{ padding: '2.5rem', border: '2px solid var(--accent)' }}>
                             <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>7. Continuous Innovation</h3>
                             <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, fontSize: '1.05rem' }}>
-                                Digital growth is not a one-time project. At Fly Towards Digital Innovation, we follow a strictly measurable "Plan, Execute, Measure, Improve" model to continuously optimize real-time results.
+                                Digital growth is not a one-time project. At Sanju Wind Energy Services, we follow a strictly measurable "Plan, Execute, Measure, Improve" model to continuously optimize real-time results.
                             </p>
                         </div>
                     </div>

@@ -36,14 +36,14 @@ const About = () => {
                 </div>
             </section>
 
-            {/* About Fly Towards */}
+            {/* About Sanju Wind Energy */}
             <section id="about" style={{ background: 'rgba(0, 242, 255, 0.01)', position: 'relative' }}>
                 <div className="grid-2">
                     <div data-aos="fade-right">
                         <span className="section-tag">About Company</span>
-                        <h2 style={{ fontSize: '2.8rem', marginBottom: '2rem' }}>About Fly Towards <br /><span className="gradient-text">Digital Innovation</span></h2>
+                        <h2 style={{ fontSize: '2.8rem', marginBottom: '2rem' }}>About Sanju Wind Energy <br /><span className="gradient-text">Services</span></h2>
                         <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
-                            Fly Towards Digital Innovation is a results driven digital marketing and software solutions company focused on helping businesses build a strong online presence and achieve consistent growth.
+                            Sanju Wind Energy Services is a results driven digital marketing and software solutions company focused on helping businesses build a strong online presence and achieve consistent growth.
                         </p>
                         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
                             We provide innovative, scalable, and affordable digital solutions for startups, small businesses, and growing enterprises looking to succeed in today’s competitive digital landscape.
@@ -73,7 +73,7 @@ const About = () => {
                             <span className="section-tag">Who We Are</span>
                             <h3 className="mb-4" style={{ fontSize: '2.2rem' }}>Transforming Businesses</h3>
                             <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', lineHeight: 1.8 }}>
-                                We are a team of skilled digital marketers, designers, developers, and growth strategists passionate about transforming businesses through digital innovation. Our expertise includes digital marketing services, SEO, social media marketing, Google Ads, website and app development, CRM software, billing software, payroll software, and WhatsApp Marketing API solutions.
+                                We are a team of skilled technicians, designers, developers, and growth strategists passionate about transforming businesses through innovative services. Our expertise includes wind energy solutions, maintenance services, and specialized technician support.
                             </p>
                             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                                 <li style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>

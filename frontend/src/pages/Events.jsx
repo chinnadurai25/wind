@@ -44,7 +44,7 @@ const Events = () => {
                     </span>
                     <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.2 }}>
                         Connect, Learn, and Grow <br />
-                        <span className="gradient-text">With Fly Towards</span>
+                        <span className="gradient-text">With Sanju Wind Energy</span>
                     </h1>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '2rem', marginInline: 'auto', maxWidth: '700px' }}>
                         Stay ahead of the curve. Join our webinars, workshops, and meetups designed to empower businesses and tech professionals with actionable insights and cutting-edge digital strategies.
