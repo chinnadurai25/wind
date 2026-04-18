@@ -9,7 +9,7 @@ const Footer = () => {
                 {/* Column 1: Brand & Address */}
                 <div style={{ gridColumn: 'span 1' }}>
                     <Link to="/" className="logo" style={{ marginBottom: '1.5rem', display: 'block', textDecoration: 'none' }}>
-                        <img src="/logo.png" alt="Sanju Wind Energy Logo" style={{ height: '100px', width: '100px', borderRadius: '50%', objectFit: 'cover' }} />
+                        <img src="/logo.png" alt="Sanju Wind Energy Logo" style={{ height: '100px', width: 'auto' }} />
                     </Link>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.8, marginBottom: '2rem' }}>
                         Empowering your growth with our digital expertise. Bridging creativity with technology to boost your visibility and performance.

@@ -26,7 +26,7 @@ const About = () => {
                     <div className="hero-image-v2" data-aos="fade-left" style={{ transitionDelay: '0.2s' }}>
                         <div className="glass-container">
                             <img
-                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                                src="windmill3.jpg"
                                 alt="Innovation Hub"
                                 className="floating-img"
                             />
@@ -149,7 +149,7 @@ const About = () => {
             {/* Mission & Vision */}
             <section id="mission" style={{ background: 'rgba(255, 0, 122, 0.01)' }}>
                 <div className="grid">
-                    <div className="card text-center" data-aos="fade-up" style={{ padding: '6rem 3rem', background: 'url(https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop) center/cover', position: 'relative', overflow: 'hidden' }}>
+                    <div className="card text-center" data-aos="fade-up" style={{ padding: '6rem 3rem', background: 'url(windmill4.jpg) center/cover', position: 'relative', overflow: 'hidden' }}>
                         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8))', zIndex: 0 }}></div>
                         <div style={{ position: 'relative', zIndex: 1, color: 'white' }}>
                             <h2 className="mb-4" style={{ fontSize: '3rem', color: 'white' }}>Our Mission</h2>
@@ -159,7 +159,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="card text-center" data-aos="fade-up" style={{ transitionDelay: '0.1s', padding: '6rem 3rem', background: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop) center/cover', position: 'relative', overflow: 'hidden' }} id="vision">
+                    <div className="card text-center" data-aos="fade-up" style={{ transitionDelay: '0.1s', padding: '6rem 3rem', background: 'url(windmill5.jpg) center/cover', position: 'relative', overflow: 'hidden' }} id="vision">
                         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8))', zIndex: 0 }}></div>
                         <div style={{ position: 'relative', zIndex: 1, color: 'white' }}>
                             <h2 className="mb-4" style={{ fontSize: '3rem', color: 'white' }}>Our Vision</h2>

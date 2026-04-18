@@ -21,6 +21,7 @@ import Events from './pages/Events';
 import Careers from './pages/Careers';
 import Loader from './components/Loader';
 import AdminLetterhead from './pages/AdminLetterhead';
+import IndustrialServiceDetail from './pages/IndustrialServiceDetail';
 
 function App() {
     useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/service" element={<Service />} />
+                    <Route path="/service/:slug" element={<IndustrialServiceDetail />} />
                     <Route path="/web-development" element={<WebDev />} />
                     <Route path="/whatsapp-api" element={<WhatsAppAPI />} />
                     <Route path="/digital-marketing" element={<DigitalMarketing />} />

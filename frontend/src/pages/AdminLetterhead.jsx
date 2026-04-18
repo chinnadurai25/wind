@@ -20,7 +20,7 @@ const AdminLetterhead = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        if (username === 'admin' && password === 'admin123') {
+        if (username === 'admin@gmail.com' && password === 'admin123') {
             setIsAuthenticated(true);
             setLoginError('');
         } else {
@@ -76,10 +76,21 @@ const AdminLetterhead = () => {
         setIsLoading(true);
         try {
             const letterContent = document.querySelector('.letter-body').innerHTML;
+            const footerContact = document.querySelector('.footer-contact-info').innerHTML;
+            const footerAddress = document.querySelector('.footer-address-info').innerHTML;
+            const footerReg = document.querySelector('.footer-reg-info').innerHTML;
+
+            const fullData = JSON.stringify({
+                body: letterContent,
+                contact: footerContact,
+                address: footerAddress,
+                reg: footerReg
+            });
+
             await fetch('http://localhost:5000/api/letters', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ content: letterContent })
+                body: JSON.stringify({ content: fullData })
             });
             alert('Letter saved to Database!');
             fetchLetters();
@@ -92,9 +103,23 @@ const AdminLetterhead = () => {
     };
 
     const handleLoad = (content) => {
-        const letterBody = document.querySelector('.letter-body');
-        if (letterBody) {
-            letterBody.innerHTML = content;
+        try {
+            const data = JSON.parse(content);
+            if (data.body) {
+                document.querySelector('.letter-body').innerHTML = data.body;
+                if (data.contact) document.querySelector('.footer-contact-info').innerHTML = data.contact;
+                if (data.address) document.querySelector('.footer-address-info').innerHTML = data.address;
+                if (data.reg) document.querySelector('.footer-reg-info').innerHTML = data.reg;
+            } else {
+                // Fallback for legacy string-only data
+                document.querySelector('.letter-body').innerHTML = content;
+            }
+        } catch (e) {
+            // If not JSON, treat as legacy string content
+            const letterBody = document.querySelector('.letter-body');
+            if (letterBody) {
+                letterBody.innerHTML = content;
+            }
         }
     };
 
@@ -183,14 +208,14 @@ const AdminLetterhead = () => {
                     {/* Footer Content */}
                     <div className="letter-footer">
                         <div className="footer-details">
-                            <div className="footer-contact">
+                            <div className="footer-contact footer-contact-info" contentEditable="true" suppressContentEditableWarning={true}>
                                 <span>📞 6352109398, 9524844917</span>
                                 <span>✉️ anandvino29@gmail.com</span>
                             </div>
-                            <div className="footer-address">
+                            <div className="footer-address footer-address-info" contentEditable="true" suppressContentEditableWarning={true}>
                                 📍 81/2, Gandhi Bazar, Puliankudi Dist. Tenkasi (Tamilnadu)-627855
                             </div>
-                            <div className="footer-reg">
+                            <div className="footer-reg footer-reg-info" contentEditable="true" suppressContentEditableWarning={true}>
                                 <span>GSTIN : 33BGLPA9236L1Z7</span>
                                 <span>MSME No.: UDYAM-TN-37-0043125</span>
                             </div>

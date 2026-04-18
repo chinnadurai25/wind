@@ -78,7 +78,14 @@ const Products = () => {
             <div className="mesh-bg"></div>
 
             {/* Hero Section */}
-            <section className="hero" style={{ minHeight: '60vh', paddingBottom: '40px' }}>
+            <section className="hero" style={{ 
+                minHeight: '60vh', 
+                paddingBottom: '40px',
+                background: 'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(windmill2.jpg) center/cover',
+                backgroundAttachment: 'fixed',
+                marginTop: '100px',
+                borderRadius: '0 0 50px 50px'
+            }}>
                 <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }} data-aos="fade-up">
                     <span className="section-tag" style={{ justifyContent: 'center', display: 'flex' }}>Our Ecosystem</span>
                     <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', marginBottom: '1.5rem' }}>

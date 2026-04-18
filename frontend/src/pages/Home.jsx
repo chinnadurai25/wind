@@ -102,7 +102,7 @@ const Home = () => {
                     <div className="hero-image-v2" data-aos="fade-left" style={{ transitionDelay: '0.2s' }}>
                         <div className="glass-container" style={{ padding: '1rem', border: '1px solid var(--border)', borderRadius: '40px' }}>
                             <img
-                                src="home_hero_innovation_cyber_1772536795720.png"
+                                src="windmill.jpg"
                                 alt="Services Hub"
                                 className="floating-img"
                                 style={{ borderRadius: '30px', width: '100%' }}
@@ -162,7 +162,7 @@ const Home = () => {
                         </div>
                         <div className="solution-header">
                             <div className="solution-img-box">
-                                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop" alt="Digital Marketing" />
+                                <img src="windmill1.jpg" alt="Digital Marketing" />
                             </div>
                             <h3 className="solution-title">Digital <br />Marketing</h3>
                         </div>
@@ -184,7 +184,7 @@ const Home = () => {
                         </div>
                         <div className="solution-header">
                             <div className="solution-img-box">
-                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Customised Solutions" />
+                                <img src="windmill2.jpg" alt="Customised Solutions" />
                             </div>
                             <h3 className="solution-title">Customised <br />Solutions</h3>
                         </div>
