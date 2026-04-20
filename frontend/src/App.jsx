@@ -33,7 +33,7 @@ function App() {
     }, []);
 
     return (
-        <Router>
+        <Router basename="/projects/wind">
             <Loader />
             <div className="app">
                 <Navbar />
