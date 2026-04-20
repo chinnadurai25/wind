@@ -27,7 +27,7 @@ const Navbar = () => {
     return (
         <nav>
             <Link to="/" className="logo">
-                <img src="/logo.png" alt="Sanju Wind Energy Logo" style={{ height: '80px', width: 'auto' }} />
+                <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Sanju Wind Energy Logo" style={{ height: '80px', width: 'auto' }} />
             </Link>
 
             <div className="menu-icon" onClick={toggleMenu}>
