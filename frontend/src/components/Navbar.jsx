@@ -47,7 +47,6 @@ const Navbar = () => {
                         <li onClick={closeMenu}><Link to="/service">Blade Repair Work</Link></li>
                         <li onClick={closeMenu}><Link to="/service">Rope Access Work</Link></li>
                         <li onClick={closeMenu}><Link to="/service">HSE Safety Services</Link></li>
-                        <li onClick={closeMenu}><Link to="/service">All Services</Link></li>
                     </ul>
                 </li>
 

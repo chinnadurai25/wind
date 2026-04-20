@@ -102,7 +102,7 @@ const Careers = () => {
                             <p style={{ color: '#cbd5e1', lineHeight: 1.8, fontSize: '1.15rem', marginBottom: '2.5rem', maxWidth: '650px', marginInline: 'auto' }}>
                                 We're constantly evolving and always ready to make room for exceptional talent. If you have unique skills that can drive our services forward, we want to hear from you.
                             </p>
-                            <a href="mailto:info@flytowardsdigitalinnovation.com" className="btn btn-primary" style={{ padding: '1.2rem 3rem', fontSize: '1.1rem', background: 'var(--primary)', color: '#000', border: 'none', fontWeight: 700 }}>
+                            <a href="mailto:anandvino29@gmail.com" className="btn btn-primary" style={{ padding: '1.2rem 3rem', fontSize: '1.1rem', background: 'var(--primary)', color: '#000', border: 'none', fontWeight: 700 }}>
                                 Send Your Resume <ArrowRight size={20} style={{ marginLeft: '10px' }} />
                             </a>
                         </div>

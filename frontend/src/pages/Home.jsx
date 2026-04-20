@@ -7,22 +7,22 @@ const Home = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const digitalMarketingServices = [
-        "Search Engine Optimization (SEO)",
-        "Social Media Marketing",
-        "Google Ads / Meta ads",
-        "LinkedIn Marketing",
-        "Digital Marketing Strategy",
-        "Branding & Design",
-        "WhatsApp Marketing",
-        "Video Edits and Production"
+    const windServices = [
+        "Installation & Commissioning",
+        "Routine Maintenance",
+        "Blade Repair & Refurbishment",
+        "Rope Access Support",
+        "HSE Safety Compliance",
+        "Wind Turbine Inspection",
+        "Emergency Maintenance",
+        "Technical Support"
     ];
 
-    const itSolutionsServices = [
-        "Web Development",
-        "App Development",
-        "Software & CRM Solutions",
-        "Cloud & Hosting"
+    const industrialSolutions = [
+        "Tower Maintenance",
+        "Gearbox Inspection",
+        "Hydraulic Systems",
+        "Electrical Repair"
     ];
 
     const whyTrustUs = [
@@ -35,42 +35,27 @@ const Home = () => {
 
     const testimonials = [
         {
-            quote: "Sanju Wind Energy Services helped our business go from local visibility to national reach. Their SEO and ad strategy brought us a 250% increase in website leads within 3 months.",
+            quote: "Sanju Wind Energy Services helped our facility achieve maximum efficiency. Their maintenance team is professional and highly skilled.",
             author: "Priya Sharma",
-            role: "Marketing Manager"
+            role: "Energy Manager"
         },
         {
-            quote: "Our new website designed by Sanju Wind Energy Services is fast, modern, and user friendly. Their team perfectly captured our brand and improved our online conversions.",
+            quote: "Their blade repair work saved us a significant amount of downtime. Truly experts in the field of wind energy solutions.",
             author: "Ramesh Kumar",
-            role: "Founder, RK Industries"
+            role: "Technical Head, RK Industries"
         },
         {
-            quote: "The branding and social media team gave our company a fresh digital identity. From logo to Instagram campaigns, everything looked consistent and professional.",
+            quote: "Professional rope access and safe installation protocols. They are our go-to partner for all wind turbine services.",
             author: "Anjali Mehta",
-            role: "Brand Owner"
-        },
-        {
-            quote: "We started Google and Meta ads with Sanju Wind Energy Services, and within weeks our inquiries doubled. The reporting and support team are very transparent and helpful.",
-            author: "Neha Raj",
-            role: "Business Consultant"
-        },
-        {
-            quote: "Their app development service was top notch delivered on time with smooth performance. The app is now helping us manage customers more efficiently.",
-            author: "Arun Varma",
-            role: "Product Head"
-        },
-        {
-            quote: "From website creation to SEO and ongoing support, Sanju Wind Energy has been our trusted digital partner. Their team truly cares about our business success.",
-            author: "Vignesh R",
-            role: "Small Business Owner"
+            role: "Facility Director"
         }
     ];
 
     const faqs = [
-        { q: "What exactly does Sanju Wind Energy Services do?", a: "We provide complete digital marketing and IT solutions to increase your reach and revenue." },
-        { q: "How can this help my business grow?", a: "Our data-driven strategies and custom campaigns focus on real, measurable business results. It helps businesses reach customers online, increase visibility, and grow sales faster than traditional methods." },
-        { q: "Do you offer both Marketing and Engineering?", a: "Yes, we handle everything — from marketing to web, app, and software development." },
-        { q: "Does digital marketing actually work?", a: "Yes! Targeted campaigns attract the right audience who are ready to buy your products or services." }
+        { q: "What exactly does Sanju Wind Energy Services do?", a: "We provide complete installation, maintenance, and repair solutions for wind turbines and industrial assets." },
+        { q: "Do you offer emergency repair services?", a: "Yes, our technical team is available for emergency maintenance to minimize your downtime." },
+        { q: "Is your team certified for high-altitude work?", a: "Absolutely. Our rope access team is IRATA certified and follows strict HSE safety standards." },
+        { q: "How can we get a service quote?", a: "You can contact our sales team through the contact page or WhatsApp for a free site consultation." }
     ];
 
     return (
@@ -86,10 +71,10 @@ const Home = () => {
                             <span className="gradient-text" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', display: 'block', marginTop: '0.5rem' }}>SERVICES</span>
                         </h1>
                         <h2 className="mb-4" style={{ fontSize: '1.6rem', fontWeight: 700, opacity: 0.9, lineHeight: 1.4, maxWidth: '600px' }}>
-                            Empowering Businesses Through <br /> Digital Marketing & IT Innovation
+                            Pioneering Sustainable Energy Through <br /> Specialized Technical Services
                         </h2>
                         <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '600px', lineHeight: 1.8 }}>
-                            We help brands grow, connect, and succeed through result-driven digital marketing and modern IT solutions.
+                            We provide world-class installation, maintenance, and repair services for the wind energy sector, ensuring maximum efficiency and reliability.
                         </p>
                         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
                             <a href="#services" className="btn btn-primary" style={{ padding: '1.2rem 2.5rem', fontSize: '1.1rem' }}>
@@ -128,20 +113,20 @@ const Home = () => {
                         <div style={{ background: 'rgba(0, 242, 255, 0.1)', padding: '1rem', borderRadius: '50%', marginBottom: '1rem' }}>
                             <Users size={32} color="var(--primary)" />
                         </div>
-                        <span className="stat-label" style={{ fontSize: '1.1rem', fontWeight: 600 }}>Experienced Employees</span>
+                        <span className="stat-label" style={{ fontSize: '1.1rem', fontWeight: 600 }}>Experienced Technicians</span>
                     </div>
                     <div className="stat-item-v2" style={{ borderLeft: '1px solid var(--border)', borderRight: '1px solid var(--border)', paddingLeft: '3rem', paddingRight: '3rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <div style={{ background: 'rgba(255, 0, 122, 0.1)', padding: '1rem', borderRadius: '50%', marginBottom: '1rem' }}>
                             <Trophy size={32} color="var(--secondary)" />
                         </div>
-                        <span className="stat-num" style={{ fontSize: '2.5rem', marginBottom: '0.2rem' }}>15+</span>
-                        <span className="stat-label" style={{ fontSize: '1.1rem', fontWeight: 600 }}>Clients Served</span>
+                        <span className="stat-num" style={{ fontSize: '2.5rem', marginBottom: '0.2rem' }}>50+</span>
+                        <span className="stat-label" style={{ fontSize: '1.1rem', fontWeight: 600 }}>Wind Farms Served</span>
                     </div>
                     <div className="stat-item-v2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <div style={{ background: 'rgba(157, 0, 255, 0.1)', padding: '1rem', borderRadius: '50%', marginBottom: '1rem' }}>
-                            <Globe size={32} color="var(--accent)" />
+                            <Shield size={32} color="var(--accent)" />
                         </div>
-                        <span className="stat-label" style={{ fontSize: '1.1rem', fontWeight: 600 }}>Trusted by Global Brands</span>
+                        <span className="stat-label" style={{ fontSize: '1.1rem', fontWeight: 600 }}>Safety & Quality Assured</span>
                     </div>
                 </div>
             </section>
@@ -162,14 +147,14 @@ const Home = () => {
                         </div>
                         <div className="solution-header">
                             <div className="solution-img-box">
-                                <img src="windmill1.jpg" alt="Digital Marketing" />
+                                <img src="windmill1.jpg" alt="Wind Energy Services" />
                             </div>
-                            <h3 className="solution-title">Digital <br />Marketing</h3>
+                            <h3 className="solution-title">Wind Energy <br />Services</h3>
                         </div>
 
                         <ul style={{ listStyle: 'none', color: 'var(--text-dark)', fontSize: '1.1rem' }}>
-                            {digitalMarketingServices.map((service, idx) => (
-                                <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '1rem 0', borderBottom: idx !== digitalMarketingServices.length - 1 ? '1px solid var(--border)' : 'none' }}>
+                            {windServices.map((service, idx) => (
+                                <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '1rem 0', borderBottom: idx !== windServices.length - 1 ? '1px solid var(--border)' : 'none' }}>
                                     <CheckCircle2 size={22} color="var(--primary)" style={{ flexShrink: 0 }} />
                                     <span style={{ fontWeight: 500 }}>{service}</span>
                                 </li>
@@ -184,14 +169,14 @@ const Home = () => {
                         </div>
                         <div className="solution-header">
                             <div className="solution-img-box">
-                                <img src="windmill2.jpg" alt="Customised Solutions" />
+                                <img src="windmill2.jpg" alt="Industrial Solutions" />
                             </div>
-                            <h3 className="solution-title">Customised <br />Solutions</h3>
+                            <h3 className="solution-title">Industrial <br />Solutions</h3>
                         </div>
 
                         <ul style={{ listStyle: 'none', color: 'var(--text-dark)', fontSize: '1.1rem', marginBottom: '2rem' }}>
-                            {itSolutionsServices.map((service, idx) => (
-                                <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '1rem 0', borderBottom: idx !== itSolutionsServices.length - 1 ? '1px solid var(--border)' : 'none' }}>
+                            {industrialSolutions.map((service, idx) => (
+                                <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '1rem 0', borderBottom: idx !== industrialSolutions.length - 1 ? '1px solid var(--border)' : 'none' }}>
                                     <CheckCircle2 size={22} color="var(--secondary)" style={{ flexShrink: 0 }} />
                                     <span style={{ fontWeight: 500 }}>{service}</span>
                                 </li>
@@ -228,25 +213,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Founder Quote */}
-            <section style={{ paddingTop: '160px' }}>
-                <div className="founder-card" data-aos="zoom-in">
-                    <div className="founder-img-container">
-                        <img src="/sanjay.png" alt="Mr. SANJAY KUMAR" />
-                    </div>
-                    <div>
-                        <Quote size={50} color="var(--secondary)" style={{ margin: '0 auto 1.5rem', opacity: 0.2 }} />
-                        <p style={{ fontSize: '1.6rem', fontWeight: 500, fontStyle: 'italic', marginBottom: '2.5rem', lineHeight: 1.6, color: 'var(--text-dark)' }}>
-                            "Every brand has a story — we’re here to make it reach the world. At Sanju Wind Energy, we make that happen through Innovation, strategy and commitment"
-                        </p>
-                        <h4 style={{ fontSize: '1.6rem', fontWeight: 900, marginBottom: '0.3rem' }}>Mr. SANJAY KUMAR</h4>
-                        <span className="section-tag" style={{ border: 'none', background: 'transparent', padding: 0, justifyContent: 'center' }}>FOUNDER & CEO, Sanju Wind Energy</span>
-                    </div>
-                </div>
-
-                {/* Official Partner Badge */}
-
-            </section>
 
             {/* Testimonials */}
             <section style={{ background: 'rgba(0, 242, 255, 0.01)' }}>
@@ -333,10 +299,10 @@ const Home = () => {
                         On all services! This is a limited time launch offer. Ready to build your digital future together? Let's talk.
                     </p>
                     <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                        <a href="https://wa.me/919080999823" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
+                        <a href="https://wa.me/916352109398" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
                             Enquire Now <ArrowRight size={20} />
                         </a>
-                        <Link to="/contact" className="btn btn-outline" style={{ padding: '1.2rem 3rem' }}>Contact Sales</Link>
+                        <Link to="/contact" className="btn btn-outline" style={{ padding: '1.2rem 3rem' }}>Contact Us</Link>
                     </div>
                 </div>
             </section>

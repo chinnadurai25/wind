@@ -104,44 +104,30 @@ const About = () => {
 
                     <div className="card text-center" data-aos="fade-up" style={{ padding: '3rem 2rem' }}>
                         <div style={{ margin: '0 auto 1.5rem', width: '100px', height: '100px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/installation.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Installation & Maintenance" />
                         </div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Digital Marketing & SEO</h4>
+                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Installation & Maintenance</h4>
                     </div>
 
                     <div className="card text-center" data-aos="fade-up" data-aos-delay="100" style={{ padding: '3rem 2rem' }}>
                         <div style={{ margin: '0 auto 1.5rem', width: '100px', height: '100px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/blade_repair.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Blade Repair Work" />
                         </div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Web & App Development</h4>
+                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Blade Repair Work</h4>
                     </div>
 
                     <div className="card text-center" data-aos="fade-up" data-aos-delay="200" style={{ padding: '3rem 2rem' }}>
                         <div style={{ margin: '0 auto 1.5rem', width: '100px', height: '100px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/windmill2.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Rope Access Work" />
                         </div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>CRM & Business Software</h4>
+                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Rope Access Work</h4>
                     </div>
 
                     <div className="card text-center" data-aos="fade-up" data-aos-delay="300" style={{ padding: '3rem 2rem' }}>
                         <div style={{ margin: '0 auto 1.5rem', width: '100px', height: '100px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2036&auto=format&fit=crop" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/windmill3.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="HSE Safety Services" />
                         </div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Billing & Payroll Systems</h4>
-                    </div>
-
-                    <div className="card text-center" data-aos="fade-up" data-aos-delay="400" style={{ padding: '3rem 2rem' }}>
-                        <div style={{ margin: '0 auto 1.5rem', width: '100px', height: '100px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        </div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>WhatsApp Marketing API</h4>
-                    </div>
-
-                    <div className="card text-center" data-aos="fade-up" data-aos-delay="500" style={{ padding: '3rem 2rem' }}>
-                        <div style={{ margin: '0 auto 1.5rem', width: '100px', height: '100px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        </div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Growth Strategy & Automation</h4>
+                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>HSE Safety Services</h4>
                     </div>
                 </div>
             </section>
@@ -188,7 +174,7 @@ const About = () => {
                     <span className="section-tag" style={{ position: 'relative' }}>Let’s Grow Together</span>
                     <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem', position: 'relative' }}>Looking for digital marketing, <br /><span className="gradient-text">software solutions,</span> or WhatsApp automation?</h2>
                     <p style={{ fontSize: '1.25rem', marginBottom: '3rem', color: 'var(--text-muted)', position: 'relative' }}>
-                        We are here to help. Join businesses that have flown towards success with our expert digital strategies.
+                        We are here to help. Join businesses that have achieved success with our expert digital strategies.
                     </p>
                     <a href="/contact" className="btn btn-primary" style={{ padding: '1.5rem 4rem', fontSize: '1.2rem', position: 'relative' }}>
                         Get a Free Consulation <ArrowRight size={24} />

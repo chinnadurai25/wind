@@ -22,7 +22,7 @@ const Contact = () => {
     const whyChooseUs = [
         { icon: <Zap size={24} color="var(--primary)" />, text: "Fast Response" },
         { icon: <Shield size={24} color="var(--secondary)" />, text: "Affordable Services" },
-        { icon: <Users size={24} color="var(--accent)" />, text: "Expert Digital Marketing Team" },
+        { icon: <Users size={24} color="var(--accent)" />, text: "Expert Support Team" },
         { icon: <Target size={24} color="var(--primary)" />, text: "Custom Strategies" }
     ];
 
@@ -41,7 +41,7 @@ const Contact = () => {
                         <span className="gradient-text">New Digital Heights</span>
                     </h1>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                        Have a project in mind? Need more customers? Or want to grow your brand online? Our team is here to support your digital journey every step of the way.
+                        Have a project in mind? Need expert technical services? Or want to grow your business? Our team is here to support your journey every step of the way.
                     </p>
                 </div>
             </section>
@@ -65,7 +65,10 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem', fontWeight: 700 }}>Phone / WhatsApp</h4>
-                                        <a href="https://wa.me/919080999823" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', fontSize: '1.05rem', textDecoration: 'none' }}>+91 90809 99823</a>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                                            <a href="https://wa.me/916352109398" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', fontSize: '1.05rem', textDecoration: 'none' }}>+91 63521 09398</a>
+                                            <a href="tel:9524844917" style={{ color: 'var(--text-muted)', fontSize: '1.05rem', textDecoration: 'none' }}>+91 95248 44917</a>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -75,7 +78,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem', fontWeight: 700 }}>Email Address</h4>
-                                        <a href="mailto:flytowardsdigitalinnovation@gmail.com" style={{ color: 'var(--text-muted)', fontSize: '1.05rem', textDecoration: 'none', wordBreak: 'break-all' }}>flytowardsdigitalinnovation@gmail.com</a>
+                                        <a href="mailto:anandvino29@gmail.com" style={{ color: 'var(--text-muted)', fontSize: '1.05rem', textDecoration: 'none', wordBreak: 'break-all' }}>anandvino29@gmail.com</a>
                                     </div>
                                 </div>
 
@@ -95,7 +98,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem', fontWeight: 700 }}>Office Address</h4>
-                                        <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', margin: 0, lineHeight: 1.6 }}>Sanju Wind Energy Services,<br />vadaku Ratha veethi sankarankovil,<br />Tenkasi, Tamil Nadu - 627756</p>
+                                        <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', margin: 0, lineHeight: 1.6 }}>Sanju Wind Energy Services,<br />81/2, Gandhi Bazar, Puliankudi Dist.<br />Tenkasi (Tamilnadu)-627855</p>
                                     </div>
                                 </div>
                             </div>

@@ -16,7 +16,7 @@ const Footer = () => {
                     </p>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.95rem', color: 'var(--text-muted)' }}>
                         <MapPin size={20} color="var(--primary)" style={{ flexShrink: 0, marginTop: '4px' }} />
-                        <span>Address : vadaku Ratha veethi sankarankovil, Tenkasi, Tamil Nadu 627756</span>
+                        <span>Address : 81/2, Gandhi Bazar, Puliankudi Dist. Tenkasi (Tamilnadu)-627855</span>
                     </div>
                 </div>
 
@@ -48,10 +48,10 @@ const Footer = () => {
                 <div>
                     <h4 style={{ marginBottom: '1.5rem', fontWeight: 800, color: 'white', fontSize: '1.2rem' }}>Service</h4>
                     <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                        <li><Link to="/web-development" className="footer-link">Web Development</Link></li>
-                        <li><Link to="/whatsapp-api" className="footer-link">WhatsApp Marketing API</Link></li>
-                        <li><Link to="/digital-marketing" className="footer-link">Digital Marketing</Link></li>
-                        <li><Link to="/service" className="footer-link">All Services</Link></li>
+                        <li><Link to="/service" className="footer-link">Installation & Maintenance</Link></li>
+                        <li><Link to="/service" className="footer-link">Blade Repair Work</Link></li>
+                        <li><Link to="/service" className="footer-link">Rope Access Work</Link></li>
+                        <li><Link to="/service" className="footer-link">HSE Safety Services</Link></li>
                     </ul>
 
                     <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem' }}>
@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
 
             <div style={{ marginTop: '4rem', padding: '2rem 2rem 0', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                Copyright &copy; 2025 flytowardsdigitalinnovation.com | Powered by flytowardsdigitalinnovation.com
+                Copyright &copy; 2025 sanjuwindenergy.com | Powered by Sanju Wind Energy Services
             </div>
 
             {/* Embedded styles specifically for footer links to keep hover effects clean */}
