@@ -32,8 +32,10 @@ function App() {
         });
     }, []);
 
+    const basename = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? '' : '/projects/wind';
+
     return (
-        <Router basename="/projects/wind">
+        <Router basename={basename}>
             <Loader />
             <div className="app">
                 <Navbar />
