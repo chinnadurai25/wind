@@ -2,8 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import '../styles/letterhead.css';
 
 const AdminLetterhead = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [username, setUsername] = useState('');
+    const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loginError, setLoginError] = useState('');
 
@@ -12,20 +12,43 @@ const AdminLetterhead = () => {
     const [savedLetters, setSavedLetters] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
+    // Dynamic API URL for production/VPS
+    const API_BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+        ? 'http://localhost:5005/api' 
+        : '/wind/api';
+
     useEffect(() => {
         if (isAuthenticated) {
             fetchLetters();
         }
     }, [isAuthenticated]);
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        if (username === 'admin@gmail.com' && password === 'admin123') {
-            setIsAuthenticated(true);
-            setLoginError('');
-        } else {
-            setLoginError('Invalid username or password');
+        setLoginError('');
+        try {
+            const response = await fetch(`${API_BASE_URL}/auth/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await response.json();
+            
+            if (response.ok) {
+                localStorage.setItem('token', data.token);
+                setIsAuthenticated(true);
+            } else {
+                setLoginError(data.error || 'Login failed');
+            }
+        } catch (error) {
+            setLoginError('Server connection error');
+            console.error('Login error:', error);
         }
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        setIsAuthenticated(false);
     };
 
     if (!isAuthenticated) {
@@ -35,10 +58,10 @@ const AdminLetterhead = () => {
                     <h2 style={{ textAlign: 'center', color: '#0B4C80', marginBottom: '20px' }}>Admin Login</h2>
                     <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
                         <input 
-                            type="text" 
-                            placeholder="Username" 
-                            value={username} 
-                            onChange={(e) => setUsername(e.target.value)} 
+                            type="email" 
+                            placeholder="Email" 
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)} 
                             style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }} 
                             required 
                         />
@@ -59,10 +82,17 @@ const AdminLetterhead = () => {
     }
 
     const fetchLetters = async () => {
+        const token = localStorage.getItem('token');
         try {
-            const response = await fetch('http://localhost:5000/api/letters');
+            const response = await fetch(`${API_BASE_URL}/letters`, {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            if (response.status === 401) {
+                handleLogout();
+                return;
+            }
             const data = await response.json();
-            setSavedLetters(data);
+            setSavedLetters(Array.isArray(data) ? data : []);
         } catch (error) {
             console.error('Error fetching letters:', error);
         }
@@ -74,6 +104,7 @@ const AdminLetterhead = () => {
 
     const handleSave = async () => {
         setIsLoading(true);
+        const token = localStorage.getItem('token');
         try {
             const letterContent = document.querySelector('.letter-body').innerHTML;
             const footerContact = document.querySelector('.footer-contact-info').innerHTML;
@@ -87,13 +118,23 @@ const AdminLetterhead = () => {
                 reg: footerReg
             });
 
-            await fetch('http://localhost:5000/api/letters', {
+            const response = await fetch(`${API_BASE_URL}/letters`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
                 body: JSON.stringify({ content: fullData })
             });
-            alert('Letter saved to Database!');
-            fetchLetters();
+
+            if (response.ok) {
+                alert('Letter saved to Database!');
+                fetchLetters();
+            } else if (response.status === 401) {
+                handleLogout();
+            } else {
+                alert('Failed to save letter.');
+            }
         } catch (error) {
             console.error('Error saving letter:', error);
             alert('Failed to save letter. Check backend connection.');
@@ -111,11 +152,9 @@ const AdminLetterhead = () => {
                 if (data.address) document.querySelector('.footer-address-info').innerHTML = data.address;
                 if (data.reg) document.querySelector('.footer-reg-info').innerHTML = data.reg;
             } else {
-                // Fallback for legacy string-only data
                 document.querySelector('.letter-body').innerHTML = content;
             }
         } catch (e) {
-            // If not JSON, treat as legacy string content
             const letterBody = document.querySelector('.letter-body');
             if (letterBody) {
                 letterBody.innerHTML = content;
@@ -127,11 +166,12 @@ const AdminLetterhead = () => {
         <div className="admin-letterhead-page">
             <div className="toolbar no-print">
                 <h2>Letter Editor</h2>
-                <div style={{ display: 'flex', gap: '10px' }}>
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                     <button onClick={handleSave} className="btn btn-primary" disabled={isLoading}>
                         {isLoading ? 'Saving...' : 'Save Letter'}
                     </button>
                     <button onClick={handlePrint} className="btn btn-outline">Print Letter</button>
+                    <button onClick={handleLogout} className="btn btn-outline" style={{ border: '1px solid #ff4d4f', color: '#ff4d4f' }}>Logout</button>
                 </div>
             </div>
 
