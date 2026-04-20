@@ -123,7 +123,7 @@ const Blog = () => {
                         In today’s digital economy, growth is no longer defined by physical presence — it’s driven by online visibility, digital systems, and customer engagement. Whether you’re a small business, startup, or established corporate firm, your ability to scale depends on how effectively you leverage the digital ecosystem.
                     </p>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px', color: 'var(--text-muted)', fontWeight: 600 }}>
-                        <img src="/logo.png" alt="Sanju Wind Energy" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
+                        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Sanju Wind Energy" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
                         <span>By Sanju Wind Energy Services</span>
                     </div>
                 </div>
