@@ -356,7 +356,11 @@ const AdminLetterhead = () => {
                     {/* Logo Section */}
                     <div className="header-content">
                         <div className="logo-area">
-                            <h1 className="logo-swe">SWE</h1>
+                            <h1 className="logo-swe">
+                                <span className="s">S</span>
+                                <span className="w">W</span>
+                                <span className="e">E</span>
+                            </h1>
                             <div className="logo-text-title">SANJU WIND ENERGY</div>
                             <div className="logo-text-sub">SERVICES</div>
                         </div>

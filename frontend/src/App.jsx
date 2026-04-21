@@ -32,7 +32,10 @@ function App() {
         });
     }, []);
 
-    const basename = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? '' : '/projects/wind';
+    const hostname = window.location.hostname;
+    const basename = (hostname === 'sanjuwindenergy.com' || hostname === 'www.sanjuwindenergy.com' || hostname === 'localhost' || hostname === '127.0.0.1') 
+        ? '' 
+        : '/projects/wind';
 
     return (
         <Router basename={basename}>

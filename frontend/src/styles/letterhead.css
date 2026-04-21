@@ -84,49 +84,92 @@
 }
 
 .logo-swe {
-    font-size: 3.5rem;
+    font-size: 4.2rem;
     font-weight: 900;
     margin: 0;
     line-height: 0.8;
-    font-family: 'Arial Black', sans-serif;
-    letter-spacing: -2px;
-    color: #0F9A2A;
+    font-family: 'Arial Black', Gadget, sans-serif; /* Thicker blocky font */
+    letter-spacing: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
     font-style: italic;
-    transform: skew(-5deg);
+    transform: skew(-8deg);
+    position: relative;
+}
+
+.logo-swe span {
+    display: inline-block;
+    position: relative;
+    padding: 0 2px;
+}
+
+.logo-swe .s, .logo-swe .e {
+    color: #0F9A2A;
+}
+
+/* Thicker Turbine Blade Effect */
+.logo-swe .s::after,
+.logo-swe .e::after {
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 0;
+    width: 65%;
+    height: 4.5px; /* Thicker blade */
+    background: #fff;
+}
+
+.logo-swe .e::after {
+    left: auto;
+    right: 0;
+    width: 75%;
+}
+
+.logo-swe .w {
+    color: #0B4C80;
+    font-size: 4.2rem;
+    margin: 0 -4px;
+    z-index: 2;
 }
 
 .logo-text-title {
     color: #0B4C80;
-    font-size: 1.15rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    margin-top: 8px;
-    font-family: 'Montserrat', 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: -0.2px; /* Tighter spacing like original */
+    margin-top: 2px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
 }
 
 .logo-text-sub {
     color: #0F9A2A;
     font-size: 0.8rem;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 5px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 2px;
+    margin-top: 1px;
+    text-transform: uppercase;
 }
 
 .logo-text-sub::before,
 .logo-text-sub::after {
     content: "";
     flex: 1;
-    height: 1.5px;
-    background: #0B4C80;
+    height: 2px; /* Thicker green lines */
+    background: #0F9A2A;
 }
 
-.logo-text-sub::before { margin-right: 10px; }
-.logo-text-sub::after { margin-left: 10px; }
+.logo-text-sub::before { margin-right: 15px; }
+.logo-text-sub::after { margin-left: 15px; }
 
 /* Watermark */
 .watermark {
