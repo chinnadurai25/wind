@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@400;600;700&display=swap');
+
 .admin-letterhead-page {
     padding: 100px 5% 50px;
     background: #f0f2f5;
@@ -21,6 +23,12 @@
     color: var(--secondary);
 }
 
+.toolbar-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 /* Letter Container to simulate A4 */
 .letter-container {
     max-width: 800px;
@@ -40,6 +48,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    transform-origin: top center;
 }
 
 /* Header Shapes */
@@ -47,8 +56,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 150px;
+    width: 280px;
+    height: 120px;
     z-index: 10;
 }
 
@@ -61,56 +70,63 @@
 .header-content {
     display: flex;
     justify-content: flex-end;
-    padding: 40px 50px 20px;
+    padding: 30px 40px 10px;
     position: relative;
     z-index: 20;
 }
 
 .logo-area {
-    text-align: right;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    width: 250px;
 }
 
 .logo-swe {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 900;
     margin: 0;
-    line-height: 1;
+    line-height: 0.8;
     font-family: 'Arial Black', sans-serif;
     letter-spacing: -2px;
+    color: #0F9A2A;
+    font-style: italic;
+    transform: skew(-5deg);
 }
-.logo-swe .s { color: #0F9A2A; }
-.logo-swe .w { color: #0B4C80; }
-.logo-swe .e { color: #0F9A2A; margin-left: -5px; }
 
 .logo-text-title {
     color: #0B4C80;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.5px;
-    margin-top: 5px;
+    margin-top: 8px;
+    font-family: 'Montserrat', 'Inter', sans-serif;
 }
+
 .logo-text-sub {
     color: #0F9A2A;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 4px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 5px;
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2px;
 }
+
 .logo-text-sub::before,
 .logo-text-sub::after {
     content: "";
-    position: absolute;
-    top: 50%;
-    width: 20px;
-    height: 1px;
+    flex: 1;
+    height: 1.5px;
     background: #0B4C80;
 }
-.logo-text-sub::before { right: 100%; margin-right: 10px; }
-.logo-text-sub::after { left: 100%; margin-left: 10px; }
+
+.logo-text-sub::before { margin-right: 10px; }
+.logo-text-sub::after { margin-left: 10px; }
 
 /* Watermark */
 .watermark {
@@ -118,36 +134,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.05;
+    opacity: 0.08;
     z-index: 1;
-    text-align: center;
     pointer-events: none;
-    width: 100%;
+    width: 450px;
+    height: 450px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.watermark-swe {
-    font-size: 15rem;
-    font-weight: 900;
-    font-family: 'Arial Black', sans-serif;
-    line-height: 1;
-}
-.watermark-swe .s { color: #0F9A2A; }
-.watermark-swe .w { color: #0B4C80; }
-.watermark-swe .e { color: #0F9A2A; }
 
-.watermark-title {
-    color: #0B4C80;
-    font-size: 3rem;
-    font-weight: 800;
-}
-.watermark-sub {
-    color: #0F9A2A;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 15px;
+.watermark img {
+    width: 100%;
+    height: auto;
 }
 
 /* Editable Content */
@@ -175,49 +174,153 @@
     margin-top: auto;
     position: relative;
     z-index: 20;
-    padding-top: 20px;
 }
 
-.footer-details {
-    padding: 0 40px 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    color: #333;
+.footer-details-bar {
+    background: #0b2241; /* Dark navy from image */
+    color: #fff;
+    padding: 12px 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
 }
 
-.footer-contact {
+.footer-row {
     display: flex;
-    gap: 30px;
-    font-weight: 600;
-    color: #000;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
-.footer-address {
-    font-weight: 600;
-    color: #000;
-}
-.footer-reg {
+
+.footer-item {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-item i, .footer-item span.icon {
+    background: #fff;
+    color: #0b2241;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+.footer-bottom-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
     font-weight: 700;
-    color: #000;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
 }
 
 .footer-bar {
     display: flex;
-    height: 30px;
+    height: 15px;
     width: 100%;
 }
 .bar-green {
-    flex: 3;
+    width: 30%;
     background: #0F9A2A;
 }
 .bar-blue {
-    flex: 7;
+    width: 70%;
     background: #0B4C80;
+}
+
+/* New Draft UI Styles */
+.draft-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-color: #0B4C80 !important;
+}
+
+.btn-delete-draft:hover {
+    background: #ff4d4f !important;
+}
+.btn-delete-draft:hover svg {
+    color: #fff !important;
+}
+
+.btn-refresh:hover {
+    background: #edf2f7 !important;
+    border-color: #cbd5e0 !important;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 968px) {
+    .admin-letterhead-page {
+        padding: 80px 10px 30px;
+    }
+    
+    .toolbar, .saved-letters-toolbar {
+        padding: 20px 15px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: calc(100% - 20px);
+        margin: 0 10px 15px;
+    }
+
+    .toolbar-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px !important;
+    }
+
+    .toolbar button, .saved-letters-toolbar button {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .letter-container {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        background: #f0f2f5;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .letterhead {
+        /* Use a more robust scaling method */
+        flex-shrink: 0;
+        transform: scale(calc(100vw / 230mm)); /* Scale based on viewport width */
+        transform-origin: top center;
+        margin: 20px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .letterhead {
+        transform: scale(calc(100vw / 240mm));
+    }
+}
+
+/* Fix for the height issue when scaling */
+@media screen and (max-width: 968px) {
+    .letter-container {
+        height: calc(297mm * (100vw / 230mm) + 40px);
+    }
 }
 
 /* Print Styles */

@@ -115,7 +115,16 @@ app.get('/api/letters', auth, async (req, res) => {
         const letters = await Letter.find().sort({ dateSaved: -1 });
         res.status(200).json(letters);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to Fetch letters' });
+        res.status(500).json({ error: 'Failed to fetch letters' });
+    }
+});
+
+app.delete('/api/letters/:id', auth, async (req, res) => {
+    try {
+        await Letter.findByIdAndDelete(req.params.id);
+        res.status(200).json({ message: 'Letter deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to delete letter' });
     }
 });
 

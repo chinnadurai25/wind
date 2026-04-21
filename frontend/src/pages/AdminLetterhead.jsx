@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { Trash2, FileText, RefreshCw, Clock, Calendar } from 'lucide-react';
 import '../styles/letterhead.css';
 
 const AdminLetterhead = () => {
@@ -83,6 +84,9 @@ const AdminLetterhead = () => {
 
     const fetchLetters = async () => {
         const token = localStorage.getItem('token');
+        if (!token) return;
+        
+        setIsLoading(true);
         try {
             const response = await fetch(`${API_BASE_URL}/letters`, {
                 headers: { 'Authorization': `Bearer ${token}` }
@@ -92,9 +96,12 @@ const AdminLetterhead = () => {
                 return;
             }
             const data = await response.json();
+            console.log('Fetched letters:', data);
             setSavedLetters(Array.isArray(data) ? data : []);
         } catch (error) {
             console.error('Error fetching letters:', error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -107,13 +114,15 @@ const AdminLetterhead = () => {
         const token = localStorage.getItem('token');
         try {
             const letterContent = document.querySelector('.letter-body').innerHTML;
-            const footerContact = document.querySelector('.footer-contact-info').innerHTML;
+            const footerPhone = document.querySelector('.footer-phone-info').innerHTML;
+            const footerEmail = document.querySelector('.footer-email-info').innerHTML;
             const footerAddress = document.querySelector('.footer-address-info').innerHTML;
             const footerReg = document.querySelector('.footer-reg-info').innerHTML;
 
             const fullData = JSON.stringify({
                 body: letterContent,
-                contact: footerContact,
+                phone: footerPhone,
+                email: footerEmail,
                 address: footerAddress,
                 reg: footerReg
             });
@@ -143,21 +152,70 @@ const AdminLetterhead = () => {
         }
     };
 
-    const handleLoad = (content) => {
+    const handleDelete = async (id, e) => {
+        e.stopPropagation(); // Prevent loading the letter when clicking delete
+        if (!window.confirm('Are you sure you want to delete this draft?')) return;
+        
+        const token = localStorage.getItem('token');
         try {
-            const data = JSON.parse(content);
-            if (data.body) {
-                document.querySelector('.letter-body').innerHTML = data.body;
-                if (data.contact) document.querySelector('.footer-contact-info').innerHTML = data.contact;
-                if (data.address) document.querySelector('.footer-address-info').innerHTML = data.address;
-                if (data.reg) document.querySelector('.footer-reg-info').innerHTML = data.reg;
+            const response = await fetch(`${API_BASE_URL}/letters/${id}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            if (response.ok) {
+                fetchLetters();
+            } else if (response.status === 401) {
+                handleLogout();
             } else {
-                document.querySelector('.letter-body').innerHTML = content;
+                alert('Failed to delete letter.');
             }
-        } catch (e) {
+        } catch (error) {
+            console.error('Error deleting letter:', error);
+            alert('Failed to delete letter.');
+        }
+    };
+
+    const handleLoad = (content) => {
+        if (!content) return;
+        
+        try {
+            // Handle both string and object formats
+            let data = typeof content === 'string' ? JSON.parse(content) : content;
+            
+            // If it's a double-stringified JSON, parse it again
+            if (typeof data === 'string') {
+                data = JSON.parse(data);
+            }
+
             const letterBody = document.querySelector('.letter-body');
             if (letterBody) {
-                letterBody.innerHTML = content;
+                letterBody.innerHTML = data.body || (typeof data === 'string' ? data : '');
+            }
+
+            // Load footer fields
+            if (data.phone && document.querySelector('.footer-phone-info')) {
+                document.querySelector('.footer-phone-info').innerHTML = data.phone;
+            }
+            if (data.email && document.querySelector('.footer-email-info')) {
+                document.querySelector('.footer-email-info').innerHTML = data.email;
+            }
+            if (data.address && document.querySelector('.footer-address-info')) {
+                document.querySelector('.footer-address-info').innerHTML = data.address;
+            }
+            if (data.reg && document.querySelector('.footer-reg-info')) {
+                document.querySelector('.footer-reg-info').innerHTML = data.reg;
+            }
+            
+            // Fallbacks for older data structures
+            if (data.contact) {
+                const phoneElem = document.querySelector('.footer-phone-info');
+                if (phoneElem) phoneElem.innerHTML = data.contact;
+            }
+        } catch (e) {
+            console.error('Error loading letter:', e);
+            const letterBody = document.querySelector('.letter-body');
+            if (letterBody) {
+                letterBody.innerHTML = typeof content === 'string' ? content : JSON.stringify(content);
             }
         }
     };
@@ -166,7 +224,7 @@ const AdminLetterhead = () => {
         <div className="admin-letterhead-page">
             <div className="toolbar no-print">
                 <h2>Letter Editor</h2>
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                <div className="toolbar-actions">
                     <button onClick={handleSave} className="btn btn-primary" disabled={isLoading}>
                         {isLoading ? 'Saving...' : 'Save Letter'}
                     </button>
@@ -175,36 +233,130 @@ const AdminLetterhead = () => {
                 </div>
             </div>
 
-            {savedLetters.length > 0 && (
-                <div className="saved-letters-toolbar no-print" style={{ maxWidth: '800px', margin: '0 auto 20px', background: '#fff', padding: '15px 30px', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.05)' }}>
-                    <h3>Saved Drafts</h3>
-                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '10px' }}>
+            <div className="saved-letters-toolbar no-print" style={{ 
+                maxWidth: '850px', 
+                margin: '0 auto 25px', 
+                background: '#fff', 
+                padding: '20px 30px', 
+                borderRadius: '12px', 
+                boxShadow: '0 8px 25px rgba(0,0,0,0.06)',
+                border: '1px solid #edf2f7'
+            }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', borderBottom: '2px solid #f7fafc', paddingBottom: '15px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <FileText size={22} color="#0B4C80" />
+                        <h3 style={{ margin: 0, fontSize: '1.25rem', color: '#1a202c', fontWeight: '700' }}>Saved Drafts</h3>
+                    </div>
+                    <button 
+                        onClick={fetchLetters} 
+                        className="btn-refresh" 
+                        title="Refresh Drafts"
+                        style={{ 
+                            background: '#f8fafc', 
+                            border: '1px solid #e2e8f0', 
+                            borderRadius: '8px', 
+                            padding: '8px', 
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        <RefreshCw size={18} color="#4a5568" className={isLoading ? 'spin' : ''} />
+                    </button>
+                </div>
+
+                {isLoading ? (
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 0' }}>
+                        <RefreshCw size={24} color="#0B4C80" className="spin" />
+                        <span style={{ marginLeft: '12px', color: '#4a5568', fontWeight: '500' }}>Fetching your drafts...</span>
+                    </div>
+                ) : savedLetters.length > 0 ? (
+                    <div style={{ 
+                        display: 'grid', 
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', 
+                        gap: '15px',
+                        marginTop: '10px' 
+                    }}>
                         {savedLetters.map((letter, index) => (
-                            <button key={letter._id || index} onClick={() => handleLoad(letter.content)} className="btn btn-outline" style={{ padding: '5px 15px', fontSize: '14px' }}>
-                                Draft {new Date(letter.dateSaved).toLocaleDateString()} {new Date(letter.dateSaved).toLocaleTimeString()}
-                            </button>
+                            <div 
+                                key={letter._id || index} 
+                                className="draft-card"
+                                onClick={() => handleLoad(letter.content)}
+                                style={{ 
+                                    background: '#fff', 
+                                    border: '1px solid #e2e8f0', 
+                                    borderRadius: '10px', 
+                                    padding: '12px 15px',
+                                    cursor: 'pointer',
+                                    position: 'relative',
+                                    transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '6px'
+                                }}
+                            >
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#4a5568', fontSize: '0.85rem' }}>
+                                    <Calendar size={14} />
+                                    <span>{new Date(letter.dateSaved).toLocaleDateString()}</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#718096', fontSize: '0.8rem', fontWeight: '500' }}>
+                                    <Clock size={14} />
+                                    <span>{new Date(letter.dateSaved).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                                </div>
+                                
+                                <button 
+                                    onClick={(e) => handleDelete(letter._id, e)}
+                                    className="btn-delete-draft"
+                                    title="Delete Draft"
+                                    style={{ 
+                                        position: 'absolute', 
+                                        top: '10px',
+                                        right: '10px',
+                                        background: '#fff1f0',
+                                        border: 'none',
+                                        borderRadius: '6px',
+                                        width: '32px',
+                                        height: '32px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.2s'
+                                    }}
+                                >
+                                    <Trash2 size={16} color="#ff4d4f" />
+                                </button>
+                            </div>
                         ))}
                     </div>
-                </div>
-            )}
+                ) : (
+                    <div style={{ textAlign: 'center', padding: '40px 0', background: '#f8fafc', borderRadius: '10px', border: '2px dashed #e2e8f0' }}>
+                        <FileText size={40} color="#cbd5e0" style={{ marginBottom: '10px' }} />
+                        <p style={{ color: '#718096', margin: 0, fontWeight: '500' }}>No drafts found yet.</p>
+                        <p style={{ color: '#a0aec0', fontSize: '0.85rem', marginTop: '5px' }}>Letters you save will appear here for easy access.</p>
+                    </div>
+                )}
+            </div>
 
             <div className="letter-container">
                 <div className="letterhead" ref={contentRef}>
                     {/* Header Top Shapes */}
                     <div className="header-shapes">
-                        <svg viewBox="0 0 200 100" className="top-left-shape">
-                            <polygon points="0,0 200,0 120,60 0,60" fill="#0B4C80" />
-                            <polygon points="0,0 100,0 180,50 0,100" fill="#0F9A2A" />
-                            <polygon points="0,60 80,60 0,100" fill="#0B4C80" />
+                        <svg viewBox="0 0 400 150" className="top-left-shape" preserveAspectRatio="none">
+                            {/* Blue Shape */}
+                            <path d="M0 0 L250 0 L180 80 L0 80 Z" fill="#0B4C80" />
+                            {/* Green Shape */}
+                            <path d="M0 0 L150 0 L250 120 L0 120 Z" fill="#0F9A2A" opacity="0.9" />
+                            {/* Accent Blue */}
+                            <path d="M0 80 L80 80 L0 130 Z" fill="#0B4C80" />
                         </svg>
                     </div>
 
                     {/* Logo Section */}
                     <div className="header-content">
                         <div className="logo-area">
-                            <h1 className="logo-swe">
-                                <span className="s">S</span><span className="w">W</span><span className="e">E</span>
-                            </h1>
+                            <h1 className="logo-swe">SWE</h1>
                             <div className="logo-text-title">SANJU WIND ENERGY</div>
                             <div className="logo-text-sub">SERVICES</div>
                         </div>
@@ -212,11 +364,7 @@ const AdminLetterhead = () => {
 
                     {/* Watermark Background */}
                     <div className="watermark">
-                        <div className="watermark-swe">
-                            <span className="s">S</span><span className="w">W</span><span className="e">E</span>
-                        </div>
-                        <div className="watermark-title">SANJU WIND ENERGY</div>
-                        <div className="watermark-sub">SERVICES</div>
+                        <img src="/logo.png" alt="SWE Watermark" />
                     </div>
 
                     {/* Editable Content */}
@@ -247,15 +395,30 @@ const AdminLetterhead = () => {
 
                     {/* Footer Content */}
                     <div className="letter-footer">
-                        <div className="footer-details">
-                            <div className="footer-contact footer-contact-info" contentEditable="true" suppressContentEditableWarning={true}>
-                                <span>📞 6352109398, 9524844917</span>
-                                <span>✉️ anandvino29@gmail.com</span>
+                        <div className="footer-details-bar">
+                            <div className="footer-row">
+                                <div className="footer-item">
+                                    <span className="icon">📞</span>
+                                    <span className="footer-phone-info" contentEditable="true" suppressContentEditableWarning={true}>
+                                        6352109398, 9524844917
+                                    </span>
+                                </div>
+                                <div className="footer-item">
+                                    <span className="icon">✉️</span>
+                                    <span className="footer-email-info" contentEditable="true" suppressContentEditableWarning={true}>
+                                        anandvino29@gmail.com
+                                    </span>
+                                </div>
                             </div>
-                            <div className="footer-address footer-address-info" contentEditable="true" suppressContentEditableWarning={true}>
-                                📍 81/2, Gandhi Bazar, Puliankudi Dist. Tenkasi (Tamilnadu)-627855
+                            <div className="footer-row">
+                                <div className="footer-item">
+                                    <span className="icon">📍</span>
+                                    <span className="footer-address-info" contentEditable="true" suppressContentEditableWarning={true}>
+                                        81/2, Gandhi Bazar, Puliankudi Dist. Tenkasi (Tamilnadu)-627855
+                                    </span>
+                                </div>
                             </div>
-                            <div className="footer-reg footer-reg-info" contentEditable="true" suppressContentEditableWarning={true}>
+                            <div className="footer-bottom-info footer-reg-info" contentEditable="true" suppressContentEditableWarning={true}>
                                 <span>GSTIN : 33BGLPA9236L1Z7</span>
                                 <span>MSME No.: UDYAM-TN-37-0043125</span>
                             </div>
