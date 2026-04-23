@@ -16,7 +16,7 @@ const AdminLetterhead = () => {
     // Dynamic API URL for production/VPS
     const API_BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
         ? 'http://localhost:5005/api' 
-        : '/projects/wind/api';
+        : '/api';
 
     useEffect(() => {
         if (isAuthenticated) {
