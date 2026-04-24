@@ -341,30 +341,28 @@ const AdminLetterhead = () => {
 
             <div className="letter-container">
                 <div className="letterhead" ref={contentRef}>
-                    {/* Header Top Shapes */}
                     <div className="header-shapes">
-                        <svg viewBox="0 0 400 150" className="top-left-shape" preserveAspectRatio="none">
-                            {/* Blue Shape */}
-                            <path d="M0 0 L250 0 L180 80 L0 80 Z" fill="#0B4C80" />
-                            {/* Green Shape */}
-                            <path d="M0 0 L150 0 L250 120 L0 120 Z" fill="#0F9A2A" opacity="0.9" />
-                            {/* Accent Blue */}
-                            <path d="M0 80 L80 80 L0 130 Z" fill="#0B4C80" />
+                        <svg viewBox="0 0 500 200" className="top-left-shape" preserveAspectRatio="none">
+                            {/* Dark Blue Top Shape */}
+                            <path d="M0 0 L350 0 L280 120 L0 120 Z" fill="#0B4C80" />
+                            {/* Green Overlapping Shape */}
+                            <path d="M0 15 L200 15 L380 160 L0 160 Z" fill="#0F9A2A" opacity="0.9" />
+                            {/* Bottom Blue Accent */}
+                            <path d="M0 120 L150 120 L0 200 Z" fill="#0B4C80" />
+                            {/* Middle Green Triangle */}
+                            <path d="M150 120 L420 120 L280 170 Z" fill="#0F9A2A" />
                         </svg>
                     </div>
 
                     {/* Logo Section */}
                     <div className="header-content">
                         <div className="logo-area">
-                            <h1 className="logo-swe">
-                                <span className="s">S</span>
-                                <span className="w">W</span>
-                                <span className="e">E</span>
-                            </h1>
-                            <div className="logo-text-title">SANJU WIND ENERGY</div>
-                            <div className="logo-text-sub">SERVICES</div>
+                            <img src="/logo_swe_horizontal.png" alt="Sanju Wind Energy Logo" className="header-logo-img" />
                         </div>
                     </div>
+                    
+                    {/* Header Separator Line */}
+                    <div className="header-line"></div>
 
                     {/* Watermark Background */}
                     <div className="watermark">
