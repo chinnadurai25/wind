@@ -33,25 +33,16 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Column 3: Products */}
-                <div>
-                    <h4 style={{ marginBottom: '1.5rem', fontWeight: 800, color: 'white', fontSize: '1.2rem' }}>Products</h4>
-                    <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                        <li><Link to="/fly-bill" className="footer-link">Fly Bill</Link></li>
-                        <li><Link to="/payroll" className="footer-link">FLYROLL</Link></li>
-                        <li><Link to="/smart-crm" className="footer-link">Smart CRM</Link></li>
-                        <li><Link to="/products" className="footer-link">View All Products</Link></li>
-                    </ul>
-                </div>
+
 
                 {/* Column 4: Services */}
                 <div>
                     <h4 style={{ marginBottom: '1.5rem', fontWeight: 800, color: 'white', fontSize: '1.2rem' }}>Service</h4>
                     <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                        <li><Link to="/service" className="footer-link">Installation & Maintenance</Link></li>
-                        <li><Link to="/service" className="footer-link">Blade Repair Work</Link></li>
-                        <li><Link to="/service" className="footer-link">Rope Access Work</Link></li>
-                        <li><Link to="/service" className="footer-link">HSE Safety Services</Link></li>
+                        <li><Link to="/service/installation" className="footer-link">Installation & Maintenance</Link></li>
+                        <li><Link to="/service/blade-repair" className="footer-link">Blade Repair Work</Link></li>
+                        <li><Link to="/service/rope-access" className="footer-link">Rope Access Work</Link></li>
+                        <li><Link to="/service/hse-safety" className="footer-link">HSE Safety Services</Link></li>
                     </ul>
 
                     <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem' }}>

@@ -155,9 +155,9 @@ const Products = () => {
                     maxWidth: '1000px',
                     margin: '0 auto'
                 }}>
-                    <span className="section-tag">Grand Opening Launch</span>
+                    <span className="section-tag">Get Started Today</span>
                     <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800 }}>
-                        Enjoy Flat <span className="gradient-text">25% OFF</span> on all products
+                        Transform Your <span className="gradient-text">Business</span>
                     </h2>
                     <p style={{ fontSize: '1.3rem', margin: '2rem 0 3rem' }}>
                         Ready to automate and grow your business operations? Reach out to us today.

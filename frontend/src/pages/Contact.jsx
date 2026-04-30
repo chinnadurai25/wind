@@ -20,10 +20,10 @@ const Contact = () => {
     };
 
     const whyChooseUs = [
-        { icon: <Zap size={24} color="var(--primary)" />, text: "Fast Response" },
-        { icon: <Shield size={24} color="var(--secondary)" />, text: "Affordable Services" },
-        { icon: <Users size={24} color="var(--accent)" />, text: "Expert Support Team" },
-        { icon: <Target size={24} color="var(--primary)" />, text: "Custom Strategies" }
+        { icon: <Zap size={24} color="var(--primary)" />, text: "Rapid Deployment" },
+        { icon: <Shield size={24} color="var(--secondary)" />, text: "Certified Technicians" },
+        { icon: <Users size={24} color="var(--accent)" />, text: "24/7 Support" },
+        { icon: <Target size={24} color="var(--primary)" />, text: "Safety First Approach" }
     ];
 
     return (
@@ -37,11 +37,11 @@ const Contact = () => {
                         <Send size={18} /> Contact Us
                     </span>
                     <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', lineHeight: 1.2 }}>
-                        Let’s Take Your Business to <br />
-                        <span className="gradient-text">New Digital Heights</span>
+                        Expert Wind Energy <br />
+                        <span className="gradient-text">Services & Solutions</span>
                     </h1>
                     <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>
-                        Have a project in mind? Need expert technical services? Or want to grow your business? Our team is here to support your journey every step of the way.
+                        Need professional installation, blade repair, or routine maintenance for your wind turbines? Our certified technical team is ready to ensure your assets perform at their peak.
                     </p>
                 </div>
             </section>
@@ -55,7 +55,7 @@ const Contact = () => {
                         <div style={{ marginBottom: '3rem' }}>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Get in <span className="gradient-text">Touch</span></h2>
                             <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '2.5rem' }}>
-                                Your digital success starts here. Contact us today and Sanju Wind Energy Services.
+                                Your operational efficiency starts here. Contact Sanju Wind Energy Services today for a consultation or service request.
                             </p>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -142,12 +142,12 @@ const Contact = () => {
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                                 <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-dark)' }}>Subject</label>
-                                <input type="text" required placeholder="Project Inquiry" style={{ padding: '1rem', borderRadius: '10px', border: '1px solid var(--border)', background: 'var(--bg-white)', fontSize: '1rem' }} />
+                                <input type="text" required placeholder="Service Inquiry" style={{ padding: '1rem', borderRadius: '10px', border: '1px solid var(--border)', background: 'var(--bg-white)', fontSize: '1rem' }} />
                             </div>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                                 <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-dark)' }}>Your Message</label>
-                                <textarea rows="5" required placeholder="Tell us about your project..." style={{ padding: '1rem', borderRadius: '10px', border: '1px solid var(--border)', background: 'var(--bg-white)', fontSize: '1rem', resize: 'vertical' }}></textarea>
+                                <textarea rows="5" required placeholder="Tell us about your service requirements..." style={{ padding: '1rem', borderRadius: '10px', border: '1px solid var(--border)', background: 'var(--bg-white)', fontSize: '1rem', resize: 'vertical' }}></textarea>
                             </div>
 
                             <button type="submit" disabled={formStatus === 'sending'} className="btn btn-primary" style={{ padding: '1.2rem', fontSize: '1.1rem', width: '100%', marginTop: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px' }}>

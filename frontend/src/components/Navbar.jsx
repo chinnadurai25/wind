@@ -43,15 +43,15 @@ const Navbar = () => {
                         Service <ChevronDown size={12} strokeWidth={3} className={activeDropdown === 'services' ? 'rotate' : ''} />
                     </Link>
                     <ul className={`dropdown-menu ${activeDropdown === 'services' ? 'show' : ''}`}>
-                        <li onClick={closeMenu}><Link to="/service">Installation & Maintenance</Link></li>
-                        <li onClick={closeMenu}><Link to="/service">Blade Repair Work</Link></li>
-                        <li onClick={closeMenu}><Link to="/service">Rope Access Work</Link></li>
-                        <li onClick={closeMenu}><Link to="/service">HSE Safety Services</Link></li>
+                        <li onClick={closeMenu}><Link to="/service/installation">Installation & Maintenance</Link></li>
+                        <li onClick={closeMenu}><Link to="/service/blade-repair">Blade Repair Work</Link></li>
+                        <li onClick={closeMenu}><Link to="/service/rope-access">Rope Access Work</Link></li>
+                        <li onClick={closeMenu}><Link to="/service/hse-safety">HSE Safety Services</Link></li>
                     </ul>
                 </li>
 
                 <li onClick={closeMenu}><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
-                <li onClick={closeMenu}><Link to="/admin" className={location.pathname === '/admin' ? 'active' : ''}>Admin Page</Link></li>
+
                 
                 <li className="nav-btn-mobile" onClick={closeMenu}>
                     <Link to="/contact" className="btn btn-primary">Enquire Now</Link>

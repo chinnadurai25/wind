@@ -119,7 +119,7 @@ const Home = () => {
                         <div style={{ background: 'rgba(255, 0, 122, 0.1)', padding: '1rem', borderRadius: '50%', marginBottom: '1rem' }}>
                             <Trophy size={32} color="var(--secondary)" />
                         </div>
-                        <span className="stat-num" style={{ fontSize: '2.5rem', marginBottom: '0.2rem' }}>50+</span>
+                        <span className="stat-num" style={{ fontSize: '2.0rem', marginBottom: '0.2rem' }}>Multiple</span>
                         <span className="stat-label" style={{ fontSize: '1.1rem', fontWeight: 600 }}>Wind Farms Served</span>
                     </div>
                     <div className="stat-item-v2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -250,10 +250,10 @@ const Home = () => {
                     <div data-aos="fade-right" style={{ position: 'sticky', top: '120px' }}>
                         <span className="section-tag">Your Questions Answered</span>
                         <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', marginBottom: '1.5rem', lineHeight: 1.2 }}>
-                            Let’s Build Your <br /><span className="gradient-text">Digital Future</span> Together
+                            Let’s Power Your <br /><span className="gradient-text">Sustainable Energy</span> Future
                         </h2>
                         <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '3rem', lineHeight: 1.7 }}>
-                            Whether you need a powerful digital marketing strategy or a custom IT solution, we’re ready to help your business grow.
+                            Whether you need expert turbine installation, precise blade repairs, or routine maintenance, we’re ready to ensure your wind energy assets operate at peak performance.
                         </p>
                         <Link to="/contact" className="btn btn-primary" style={{ padding: '1.2rem 2.5rem' }}>
                             Start Your Journey <ArrowRight size={20} />
@@ -291,12 +291,12 @@ const Home = () => {
                     overflow: 'hidden'
                 }}>
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '5px', background: 'var(--gradient-primary)' }}></div>
-                    <span className="section-tag" style={{ margin: '0 auto 1.5rem' }}>Grand Opening Celebration</span>
+                    <span className="section-tag" style={{ margin: '0 auto 1.5rem' }}>Get Started Today</span>
                     <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, marginBottom: '1rem' }}>
-                        Enjoy Flat <span className="gradient-text">25% OFF</span>
+                        Transform Your <span className="gradient-text">Business</span>
                     </h2>
                     <p style={{ fontSize: '1.3rem', margin: '1rem auto 3rem', maxWidth: '600px', color: 'var(--text-muted)' }}>
-                        On all services! This is a limited time launch offer. Ready to build your digital future together? Let's talk.
+                        Ready to build your digital future together? Let's talk.
                     </p>
                     <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                         <a href="https://wa.me/916352109398" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
