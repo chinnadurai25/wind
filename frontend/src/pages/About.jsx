@@ -43,10 +43,19 @@ const About = () => {
                         <span className="section-tag">About Company</span>
                         <h2 style={{ fontSize: '2.8rem', marginBottom: '2rem' }}>About Sanju Wind Energy <br /><span className="gradient-text">Services</span></h2>
                         <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
-                            Sanju Wind Energy Services is a results driven digital marketing and software solutions company focused on helping businesses build a strong online presence and achieve consistent growth.
+                            Sanju Wind Energy Services is a dedicated service provider in the wind energy sector, delivering reliable and high-quality solutions across the complete lifecycle of Wind Turbine Generators (WTGs). We support our clients with skilled manpower and technical expertise to ensure efficient and effective project execution.
+                        </p>
+                        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
+                            Our core services include WTG Installation and Commissioning, where we handle complete turbine erection activities including tower, nacelle, hub, and blade installation. We also provide WTG Maintenance Services, ensuring optimal performance, reliability, and longevity of turbines.
+                        </p>
+                        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
+                            We specialize in Blade Repair Services using advanced techniques to restore blade integrity and improve efficiency. Our team is also experienced in Rope Access Work, enabling efficient execution of complex tasks at height with minimal downtime.
+                        </p>
+                        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
+                            Additionally, we offer Third Party Inspection (TPI) Support, ensuring all lifting tools, tackles, and equipment meet required standards and certifications. We also provide HSE Documentation Preparation, including Job Safety Analysis (JSA), Method Statements, Risk Assessments, Lifting Plans, Permit-to-Work formats, and inspection records.
                         </p>
                         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
-                            We provide innovative, scalable, and affordable digital solutions for startups, small businesses, and growing enterprises looking to succeed in today’s competitive digital landscape.
+                            At Sanju Wind Energy Services, we combine experience and technical knowledge to deliver dependable solutions for the growing wind energy industry.
                         </p>
 
                         <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>

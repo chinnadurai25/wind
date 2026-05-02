@@ -78,7 +78,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 style={{ fontSize: '1.1rem', marginBottom: '0.2rem', fontWeight: 700 }}>Email Address</h4>
-                                        <a href="mailto:anandvino29@gmail.com" style={{ color: 'var(--text-muted)', fontSize: '1.05rem', textDecoration: 'none', wordBreak: 'break-all' }}>anandvino29@gmail.com</a>
+                                        <a href="mailto:Anand.a@sanjuwindenergy.com" style={{ color: 'var(--text-muted)', fontSize: '1.05rem', textDecoration: 'none', wordBreak: 'break-all' }}>Anand.a@sanjuwindenergy.com</a>
                                     </div>
                                 </div>
 

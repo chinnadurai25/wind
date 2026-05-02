@@ -38,8 +38,8 @@ const IndustrialServiceDetail = () => {
         "blade-repair": {
             title: "Blade Repair Work",
             subtitle: "High-Precision Aerodynamics",
-            heroImage: "/windmill1.jpg",
-            fieldImage: "/service2.jpg",
+            heroImage: "/bladewrk.png",
+            fieldImage: "/bladewrk.png",
             fieldMeta: { location: "Turbine Nacelle", tech: "Composite Repair", status: "Certified" },
             icon: <Hammer size={48} />,
             description: "Turbine blades are subject to intense environmental stress. Our specialized teams provide expert structural and surface repairs to restore aerodynamic efficiency, utilizing advanced composite materials that withstand the harshest weather conditions.",

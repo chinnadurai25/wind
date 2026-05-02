@@ -8,21 +8,12 @@ const Home = () => {
     }, []);
 
     const windServices = [
-        "Installation & Commissioning",
-        "Routine Maintenance",
-        "Blade Repair & Refurbishment",
-        "Rope Access Support",
+        "WTG Installation Work",
+        "WTG Maintenance",
+        "Blade Repair",
+        "Rope Access",
         "HSE Safety Compliance",
-        "Wind Turbine Inspection",
-        "Emergency Maintenance",
-        "Technical Support"
-    ];
-
-    const industrialSolutions = [
-        "Tower Maintenance",
-        "Gearbox Inspection",
-        "Hydraulic Systems",
-        "Electrical Repair"
+        "All Lifting Tools & Tackles TPI Inspection"
     ];
 
     const whyTrustUs = [
@@ -138,10 +129,10 @@ const Home = () => {
                     <h2 style={{ fontSize: '3.5rem' }}>Solutions Targeted <span className="gradient-text">for Growth</span></h2>
                 </div>
 
-                <div className="grid" style={{ margin: '0 auto', gap: '3rem', width: '100%' }}>
+                <div className="grid" style={{ margin: '0 auto', gap: '3rem', width: '100%', maxWidth: '600px' }}>
 
-                    {/* Marketing Column */}
-                    <div className="card" data-aos="fade-right" style={{ padding: '3.5rem', borderTop: '4px solid var(--primary)', position: 'relative', overflow: 'hidden' }}>
+                    {/* Wind Energy Column */}
+                    <div className="card" data-aos="fade-up" style={{ padding: '3.5rem', borderTop: '4px solid var(--primary)', position: 'relative', overflow: 'hidden' }}>
                         <div style={{ position: 'absolute', top: '-10%', right: '-5%', opacity: 0.05, transform: 'rotate(15deg)' }}>
                             <Target size={200} />
                         </div>
@@ -152,32 +143,10 @@ const Home = () => {
                             <h3 className="solution-title">Wind Energy <br />Services</h3>
                         </div>
 
-                        <ul style={{ listStyle: 'none', color: 'var(--text-dark)', fontSize: '1.1rem' }}>
+                        <ul style={{ listStyle: 'none', color: 'var(--text-dark)', fontSize: '1.1rem', marginBottom: '2rem' }}>
                             {windServices.map((service, idx) => (
                                 <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '1rem 0', borderBottom: idx !== windServices.length - 1 ? '1px solid var(--border)' : 'none' }}>
                                     <CheckCircle2 size={22} color="var(--primary)" style={{ flexShrink: 0 }} />
-                                    <span style={{ fontWeight: 500 }}>{service}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* IT Column */}
-                    <div className="card" data-aos="fade-left" style={{ padding: '3.5rem', borderTop: '4px solid var(--secondary)', position: 'relative', overflow: 'hidden' }}>
-                        <div style={{ position: 'absolute', top: '-10%', right: '-5%', opacity: 0.03, transform: 'rotate(-15deg)' }}>
-                            <Code size={200} />
-                        </div>
-                        <div className="solution-header">
-                            <div className="solution-img-box">
-                                <img src="windmill2.jpg" alt="Industrial Solutions" />
-                            </div>
-                            <h3 className="solution-title">Industrial <br />Solutions</h3>
-                        </div>
-
-                        <ul style={{ listStyle: 'none', color: 'var(--text-dark)', fontSize: '1.1rem', marginBottom: '2rem' }}>
-                            {industrialSolutions.map((service, idx) => (
-                                <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '15px', padding: '1rem 0', borderBottom: idx !== industrialSolutions.length - 1 ? '1px solid var(--border)' : 'none' }}>
-                                    <CheckCircle2 size={22} color="var(--secondary)" style={{ flexShrink: 0 }} />
                                     <span style={{ fontWeight: 500 }}>{service}</span>
                                 </li>
                             ))}

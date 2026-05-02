@@ -11,7 +11,8 @@ const Service = () => {
             image: "windmill.jpg",
             tags: ["Turbine Installation", "Routine Maintenance", "Efficiency Tuning"],
             link: "/service/installation",
-            delay: "0s"
+            delay: "0s",
+            meta: { location: "Coastal Wind Farm", tech: "Grade-A Maintenance", status: "Operational" }
         },
         {
             num: "02",
@@ -19,10 +20,11 @@ const Service = () => {
             subtitle: "Aerodynamic Precision",
             desc: "High-precision structural and aerodynamic repair services for turbine blades, restoring original efficiency and ensuring long-term structural integrity in harsh environments.",
             icon: <Hammer size={40} />,
-            image: "windmill1.jpg",
+            image: "bladewrk.png",
             tags: ["Blade Inspection", "Composite Repair", "Refurbishment"],
             link: "/service/blade-repair",
-            delay: "0.1s"
+            delay: "0.1s",
+            meta: { location: "Turbine Nacelle", tech: "Composite Repair", status: "Certified" }
         },
         {
             num: "03",
@@ -33,7 +35,8 @@ const Service = () => {
             image: "windmill2.jpg",
             tags: ["Tower Inspection", "Climbing Support", "Safe Access"],
             link: "/service/rope-access",
-            delay: "0.2s"
+            delay: "0.2s",
+            meta: { location: "High-Altitude Hub", tech: "IRATA L3 Certified", status: "Active Site" }
         },
         {
             num: "04",
@@ -44,7 +47,8 @@ const Service = () => {
             image: "service1.jpg",
             tags: ["Safety Audits", "HSE Compliance", "Risk Management"],
             link: "/service/hse-safety",
-            delay: "0.3s"
+            delay: "0.3s",
+            meta: { location: "On-Site Command", tech: "Global HSE Standard", status: "Audit Passed" }
         }
     ];
 
@@ -73,9 +77,21 @@ const Service = () => {
                         <div className="service-image-side" data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}>
                             <div className="parallax-img-box">
                                 <img src={item.image} alt={item.title} className="service-main-img" />
-                                <div className="floating-badge">
-                                    <div className="badge-icon">{item.icon}</div>
-                                    <div className="badge-text">{item.subtitle}</div>
+                                <div className="tech-meta-badge">
+                                    <div className="meta-item">
+                                        <span className="meta-label">Deployment Site</span>
+                                        <span className="meta-val">{item.meta.location}</span>
+                                    </div>
+                                    <div className="meta-divider"></div>
+                                    <div className="meta-item">
+                                        <span className="meta-label">Primary Technology</span>
+                                        <span className="meta-val">{item.meta.tech}</span>
+                                    </div>
+                                    <div className="meta-divider"></div>
+                                    <div className="meta-item">
+                                        <span className="meta-label">Operation Status</span>
+                                        <span className="meta-val status-active">{item.meta.status}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -151,35 +167,62 @@ const Service = () => {
                 .service-row:hover .service-main-img {
                     transform: scale(1.1);
                 }
-                .floating-badge {
+                .tech-meta-badge {
                     position: absolute;
-                    bottom: 40px;
-                    left: 40px;
+                    bottom: 30px;
+                    left: 30px;
                     background: rgba(255, 255, 255, 0.95);
-                    backdrop-filter: blur(10px);
-                    padding: 1rem 1.5rem;
+                    backdrop-filter: blur(20px);
+                    padding: 1.5rem 2rem;
                     border-radius: 20px;
                     display: flex;
+                    gap: 1.5rem;
                     align-items: center;
-                    gap: 1rem;
-                    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-                    border: 1px solid var(--border);
+                    z-index: 5;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+                    width: calc(100% - 60px);
+                    justify-content: space-between;
                 }
-                .badge-icon {
+                .meta-item {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .meta-label {
+                    font-size: 0.65rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    color: var(--text-muted);
+                    font-weight: 700;
+                    margin-bottom: 4px;
+                }
+                .meta-val {
+                    font-size: 0.95rem;
+                    font-weight: 800;
+                    color: var(--text-dark);
+                }
+                .status-active {
                     color: var(--primary);
-                    background: rgba(15, 154, 42, 0.1);
-                    width: 60px;
-                    height: 60px;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
-                    border-radius: 15px;
+                    gap: 6px;
                 }
-                .badge-text {
-                    font-weight: 800;
-                    font-size: 0.9rem;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
+                .status-active::before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    background: var(--primary);
+                    border-radius: 50%;
+                    animation: pulse 2s infinite;
+                }
+                @keyframes pulse {
+                    0% { transform: scale(1); opacity: 1; }
+                    100% { transform: scale(2.5); opacity: 0; }
+                }
+                .meta-divider {
+                    width: 1px;
+                    height: 30px;
+                    background: var(--border);
                 }
                 .service-content-side {
                     flex: 1;
@@ -261,12 +304,16 @@ const Service = () => {
                         transform: translateX(-50%);
                         font-size: 7rem;
                     }
-                    .floating-badge {
-                        left: 50%;
-                        transform: translateX(-50%);
-                        bottom: 20px;
-                        width: max-content;
+                    .tech-meta-badge { 
+                        bottom: 15px; 
+                        left: 15px; 
+                        width: calc(100% - 30px);
+                        padding: 1rem;
+                        gap: 1rem;
+                        flex-direction: column;
+                        align-items: flex-start;
                     }
+                    .meta-divider { display: none; }
                 }
             `}</style>
         </main>

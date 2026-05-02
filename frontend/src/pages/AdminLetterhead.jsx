@@ -408,7 +408,7 @@ const AdminLetterhead = () => {
                                 <div className="footer-item">
                                     <span className="icon">✉️</span>
                                     <span className="footer-email-info" contentEditable="true" suppressContentEditableWarning={true}>
-                                        anandvino29@gmail.com
+                                        Anand.a@sanjuwindenergy.com
                                     </span>
                                 </div>
                             </div>
