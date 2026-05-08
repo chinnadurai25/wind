@@ -12,8 +12,8 @@ const Home = () => {
         "WTG Maintenance",
         "Blade Repair",
         "Rope Access",
-        "HSE Safety Compliance",
-        "All Lifting Tools & Tackles TPI Inspection"
+        "HSE Safety Services",
+        "Third Party Inspection(Tools & Other Equipments)"
     ];
 
     const whyTrustUs = [
