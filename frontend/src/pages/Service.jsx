@@ -1,4 +1,4 @@
-import { Wrench, Hammer, ShieldCheck, Activity, Navigation, ArrowRight, Settings } from 'lucide-react';
+import { Wrench, Hammer, ShieldCheck, Activity, Navigation, ArrowRight, Settings, ClipboardCheck } from 'lucide-react';
 
 const Service = () => {
     const services = [
@@ -49,6 +49,18 @@ const Service = () => {
             link: "/service/hse-safety",
             delay: "0.3s",
             meta: { location: "On-Site Command", tech: "Global HSE Standard", status: "Audit Passed" }
+        },
+        {
+            num: "05",
+            title: "Third Party Inspection(Tools & Other Equipments)",
+            subtitle: "Compliance & Safety Audits",
+            desc: "Independent technical audits and safety certifications for all industrial lifting tools and equipment, ensuring adherence to global safety protocols and operational standards.",
+            icon: <ClipboardCheck size={40} />,
+            image: "windmill6.jpg",
+            tags: ["TPI Support", "Tool Certification", "Safety Audits"],
+            link: "/service/third-party-inspection",
+            delay: "0.4s",
+            meta: { location: "Industrial Site", tech: "TPI Certification", status: "Audit Active" }
         }
     ];
 

@@ -40,13 +40,14 @@ const Navbar = () => {
 
                 <li className={`dropdown ${activeDropdown === 'services' ? 'mobile-active' : ''}`}>
                     <Link to="/service" onClick={(e) => toggleDropdown('services', e)}>
-                        Service <ChevronDown size={12} strokeWidth={3} className={activeDropdown === 'services' ? 'rotate' : ''} />
+                        Services <ChevronDown size={12} strokeWidth={3} className={activeDropdown === 'services' ? 'rotate' : ''} />
                     </Link>
                     <ul className={`dropdown-menu ${activeDropdown === 'services' ? 'show' : ''}`}>
                         <li onClick={closeMenu}><Link to="/service/installation">Installation & Maintenance</Link></li>
                         <li onClick={closeMenu}><Link to="/service/blade-repair">Blade Repair Work</Link></li>
                         <li onClick={closeMenu}><Link to="/service/rope-access">Rope Access Work</Link></li>
                         <li onClick={closeMenu}><Link to="/service/hse-safety">HSE Safety Services</Link></li>
+                        <li onClick={closeMenu}><Link to="/service/third-party-inspection">Third Party Inspection</Link></li>
                     </ul>
                 </li>
 

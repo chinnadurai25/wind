@@ -37,12 +37,13 @@ const Footer = () => {
 
                 {/* Column 4: Services */}
                 <div>
-                    <h4 style={{ marginBottom: '1.5rem', fontWeight: 800, color: 'white', fontSize: '1.2rem' }}>Service</h4>
+                    <h4 style={{ marginBottom: '1.5rem', fontWeight: 800, color: 'white', fontSize: '1.2rem' }}>Services</h4>
                     <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                         <li><Link to="/service/installation" className="footer-link">Installation & Maintenance</Link></li>
                         <li><Link to="/service/blade-repair" className="footer-link">Blade Repair Work</Link></li>
                         <li><Link to="/service/rope-access" className="footer-link">Rope Access Work</Link></li>
                         <li><Link to="/service/hse-safety" className="footer-link">HSE Safety Services</Link></li>
+                        <li><Link to="/service/third-party-inspection" className="footer-link">Third Party Inspection</Link></li>
                     </ul>
 
                     <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem' }}>

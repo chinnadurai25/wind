@@ -138,6 +138,13 @@ const About = () => {
                         </div>
                         <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>HSE Safety Services</h4>
                     </div>
+
+                    <div className="card text-center" data-aos="fade-up" data-aos-delay="400" style={{ padding: '3rem 2rem' }}>
+                        <div style={{ margin: '0 auto 1.5rem', width: '100px', height: '100px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
+                            <img src="/windmill6.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Third Party Inspection" />
+                        </div>
+                        <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Third Party Inspection</h4>
+                    </div>
                 </div>
             </section>
 

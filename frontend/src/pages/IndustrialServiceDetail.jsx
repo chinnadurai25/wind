@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { 
     Wrench, Hammer, ShieldCheck, Navigation, 
     ArrowRight, CheckCircle2, Settings, 
-    Users, Clock, Zap, ChevronRight, Phone
+    Users, Clock, Zap, ChevronRight, Phone, ClipboardCheck
 } from 'lucide-react';
 
 const IndustrialServiceDetail = () => {
@@ -96,6 +96,27 @@ const IndustrialServiceDetail = () => {
                 { step: "02", title: "Planning", desc: "Developing a custom HSE management and response plan." },
                 { step: "03", title: "Training", desc: "Conducting intensive workshops for site technicians." },
                 { step: "04", title: "Monitoring", desc: "Ongoing audits and continuous safety improvements." }
+            ]
+        },
+        "third-party-inspection": {
+            title: "Third Party Inspection(Tools & Other Equipments)",
+            subtitle: "Compliance & Safety Audits",
+            heroImage: "/windmill6.jpg",
+            fieldImage: "/windmill6.jpg",
+            fieldMeta: { location: "Industrial Site", tech: "TPI Certification", status: "Audit Active" },
+            icon: <ClipboardCheck size={48} />,
+            description: "We offer comprehensive Third Party Inspection (TPI) Support to ensure all lifting tools, tackles, and industrial equipment meet the most stringent safety standards and international certifications. Our independent audits provide the assurance needed for high-risk operations.",
+            capabilities: [
+                { title: "Lifting Tools Audit", desc: "Systematic load testing and visual inspection of all lifting equipment." },
+                { title: "Equipment Certification", desc: "Issuing compliance certificates following successful safety verification." },
+                { title: "NDT Inspection", desc: "Non-destructive testing to identify internal material fatigue or flaws." },
+                { title: "Regulatory Compliance", desc: "Ensuring all machinery adheres to local and international safety laws." }
+            ],
+            process: [
+                { step: "01", title: "Documentation Review", desc: "Auditing previous maintenance records and manufacturer specs." },
+                { step: "02", title: "Physical Audit", desc: "On-site testing and inspection using precision calibrated tools." },
+                { step: "03", title: "Compliance Report", desc: "Detailed breakdown of findings and required corrective actions." },
+                { step: "04", title: "Certification", desc: "Official safety certification for all compliant tools and equipment." }
             ]
         }
     };

@@ -125,7 +125,7 @@ const Home = () => {
             {/* Core Solutions Grid */}
             <section id="services">
                 <div style={{ textAlign: 'center', marginBottom: '5rem' }} data-aos="fade-up">
-                    <span className="section-tag" style={{ margin: '0 auto 1.5rem' }}>Our Expertise</span>
+                    <span className="section-tag" style={{ margin: '0 auto 1.5rem' }}>Services</span>
                     <h2 style={{ fontSize: '3.5rem' }}>Solutions Targeted <span className="gradient-text">for Growth</span></h2>
                 </div>
 
